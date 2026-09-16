@@ -1,0 +1,56 @@
+PLANO - Paginas pendentes do WanderGroup
+=========================================
+
+Todas as paginas referenciadas em links .html ja existem
+(index, criar-viagem, hub-da-viagem, votacao, dia-a-dia, perfil).
+Faltam paginas acessadas por botoes/links mortos nao implementados.
+
+PAGINAS A CRIAR
+---------------
+1. chat.html
+   - "Chat do Grupo" -> hub-da-viagem.html:456 (href="#chat")
+   - "Abrir Chat de Viagem" -> index.html:246 (botao sem link)
+
+2. divisao-de-gastos.html
+   - "Divisao de Gastos" -> hub-da-viagem.html:446 (href="#divisao")
+   - "Detalhes" de custo -> hub-da-viagem.html:312 (link morto)
+
+3. notificacoes.html
+   - Botao de notificacoes -> index.html:143 e criar-viagem.html:140 (sem link)
+
+4. dados-pessoais.html
+   - Perfil -> "Dados Pessoais" -> perfil.html:330 (href="#")
+
+5. idioma-moeda.html
+   - Perfil -> "Idioma e Moeda" -> perfil.html:353 (href="#")
+
+6. privacidade-seguranca.html
+   - Perfil -> "Privacidade e Seguranca" -> perfil.html:363 (href="#")
+
+7. central-de-ajuda.html
+   - Perfil -> "Central de Ajuda" -> perfil.html:373 (href="#")
+
+OBS: "notificacoes.html" aparece em mais de um ponto, sera uma unica
+pagina compartilhada.
+
+PAGINAS IMPLICITAS (sem link atual, mas indicadas na UI)
+--------------------------------------------------------
+8. configuracoes-da-viagem.html
+   - Botao de settings no hero do hub-da-viagem.html:186 (sem link)
+
+9. novo-grupo (pagina ou dialog)
+   - Botao "Novo Grupo" -> index.html:147 e hub-da-viagem.html:164 (sem link)
+
+10. passeio-voucher.html (detalhe/voucher de passeio)
+    - "Ver Voucher" -> votacao.html:495 (botao sem link)
+    - "Sugerir Outro Passeio" -> votacao.html:507 (botao sem link)
+
+PASSOS DE EXECUCAO
+------------------
+1. Criar cada pagina .html seguindo o padrao visual existente
+   (mesmo tailwind-config, Material Symbols, Plus Jakarta Sans,
+   BottomNavBar compartilhado e TopAppBar com botao de voltar).
+2. Atualizar os links mortos (href="#", href="#chat", href="#divisao",
+   botoes sem onclick) nas paginas existentes para apontar para as
+   novas paginas.
+3. Verificar que nao restam links quebrados.

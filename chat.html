@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WanderGroup - Chat do Grupo</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#111c2d",
+            "secondary-container": "#fd6a49",
+            "on-secondary": "#ffffff",
+            "secondary": "#ae3115",
+            "primary-fixed-dim": "#76d4e7",
+            "on-background": "#111c2d",
+            "tertiary-fixed-dim": "#98cded",
+            "surface-bright": "#f9f9ff",
+            "primary-container": "#008092",
+            "on-primary-container": "#f8fdff",
+            "outline-variant": "#bdc8cb",
+            "on-tertiary-container": "#00050b",
+            "on-secondary-fixed": "#3d0600",
+            "on-surface-variant": "#3e494b",
+            "surface-dim": "#cfdaf2",
+            "primary-fixed": "#a3eeff",
+            "on-tertiary-fixed-variant": "#084c67",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#dee8ff",
+            "surface": "#f9f9ff",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#477d9a",
+            "tertiary-fixed": "#c3e8ff",
+            "surface-container-low": "#f0f3ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdad2",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#8c1900",
+            "surface-container-highest": "#d8e3fb",
+            "on-secondary-container": "#640f00",
+            "inverse-on-surface": "#ecf1ff",
+            "outline": "#6e797c",
+            "on-primary-fixed-variant": "#004e5a",
+            "surface-tint": "#006877",
+            "surface-variant": "#d8e3fb",
+            "on-tertiary-fixed": "#001e2c",
+            "inverse-primary": "#76d4e7",
+            "on-error": "#ffffff",
+            "background": "#f9f9ff",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "secondary-fixed-dim": "#ffb4a3",
+            "primary": "#006574",
+            "on-primary-fixed": "#001f25",
+            "tertiary": "#2c6480"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .shadow-ambient {
+      box-shadow: 0 4px 16px -2px rgba(10, 77, 104, 0.06), 0 2px 6px -1px rgba(10, 77, 104, 0.04);
+    }
+    .shadow-modal {
+      box-shadow: 0 12px 28px -4px rgba(8, 131, 149, 0.12), 0 6px 12px -2px rgba(10, 77, 104, 0.06);
+    }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen pb-36">
+<!-- TOP APP BAR -->
+<header class="fixed top-0 left-0 w-full z-40 flex justify-between items-center gap-2 px-margin py-space-sm bg-surface/85 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<a aria-label="Voltar para a Viagem" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors duration-150 active:scale-95 shrink-0" href="hub-da-viagem.html">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</a>
+<div class="relative shrink-0">
+<img alt="Avatar do grupo Rio de Janeiro com os Amigos" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container/30 shadow-ambient" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMKkDwvzodKf3PKiuj8mCWiX5DOaR0hdglQpoVRLbuRgJU8QoaR6FIOPclHjfcwCOrK1cQaxN_83Wr2-71KAhY15IKJH1LKt-QR8Q_3jjoMuj1lgiM9I_dju9U89l8DS2rQHcnfasCmeB5wwqRuLCiDqzJIaVIzT523uiMsMOz07Uj_ByDe8XS5icQyODNqW1dvrbBOGVr4ehrQdyPTfUqnvvzJOVxGwgVRj0TRwtR6nAG2QxTA5wqow"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-secondary-container rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="min-w-0">
+<h1 class="text-headline-md font-headline-md font-bold text-primary leading-tight truncate">Rio de Janeiro com os Amigos</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+5 membros online
+</p>
+</div>
+</div>
+<button aria-label="Informações do grupo" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors duration-150 active:scale-95 shrink-0">
+<span class="material-symbols-outlined text-[22px]">info</span>
+</button>
+</header>
+<!-- MESSAGES -->
+<main class="pt-20 max-w-xl mx-auto px-margin space-y-space-md">
+<!-- Date Divider -->
+<div class="flex items-center gap-3 pt-2">
+<span class="h-px bg-outline-variant/40 flex-1"></span>
+<span class="text-label-sm font-label-sm text-on-surface-variant px-3 py-1 rounded-full bg-surface-container-high">Hoje, 14 de Novembro</span>
+<span class="h-px bg-outline-variant/40 flex-1"></span>
+</div>
+<!-- Marina -->
+<div class="flex items-end gap-2.5">
+<img alt="Marina" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-lowest shrink-0" data-alt="Close up bright portrait of Marina with dark curls and a cheerful open smile during sunny daylight outdoors in Rio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA70ZNxRlRBj3y5Mv3M0QF4vK3jMKOqvFLlbkkZJwBYpuNpEROo9bNvK27gLwehrQ2XsE-FNIQFAR1fr7rPyOUusHx3IDkCGN2xWccYrqAiNOgy_p9l1pmkdb-voCTJVREKORvL27yHU5nS2NOsr-NqHG8GAOF3IClmuib5yNJFl2EV8YV5rfF1U0oHjPIpNRMtLLFWUdX7mHHrSv1ZIaS-2NnyqBGhwR8gJQqLzwe0m69X6WyN3U1Eqg"/>
+<div class="max-w-[78%]">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-1"><span class="font-bold text-on-surface">Marina</span> <span class="text-outline">• 09:02</span></p>
+<div class="bg-surface-container-lowest rounded-2xl rounded-bl-md p-3 shadow-ambient border border-outline-variant/20">
+<p class="text-body-md font-body-md text-on-surface">Gente, reservei nossos ingressos da escuna de Barra da Tijuca! 😄 Quem confirmar até o fim do dia garante o preço em grupo.</p>
+</div>
+</div>
+</div>
+<!-- Felipe -->
+<div class="flex items-end justify-end gap-2.5">
+<div class="max-w-[78%] text-right">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-1 text-right"><span class="text-outline">09:04</span> <span class="font-bold text-on-surface">Você (Lucas)</span></p>
+<div class="bg-primary-container text-on-primary-container rounded-2xl rounded-br-md p-3 shadow-ambient">
+<p class="text-body-md font-body-md">Boa! Já votei no passeio, conta comigo. Vale levar protetor e água?</p>
+</div>
+</div>
+</div>
+<!-- Bia -->
+<div class="flex items-end gap-2.5">
+<img alt="Bia" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-lowest shrink-0" data-alt="Sunny portrait of Bia with sunglasses pushed up on her head, bright golden hour beach ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1rYkbTrFp3vRPoBycPR0XFc8QJh8EsVgjWv6VjnTqssBg75eMn5KMQDK4ZDN1U9k1vu0kgEp0wracIF9c4dVDYXfntQKonMMPHyBaRkXNROHH42CVfPLc1T4K7SY40UGFKTB5afkfCiniZZTZVIK7E-1pjC911fnPodPAsjOKf0AKvDlRp1YzkL0HtC-z34FzeFgzEzNzoBKp9sw0T3qBeH2uEPehjuQDmKN7wEAI686ulg8qfgD_0Q"/>
+<div class="max-w-[78%]">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-1"><span class="font-bold text-on-surface">Bia</span> <span class="text-outline">• 09:05</span></p>
+<div class="bg-surface-container-lowest rounded-2xl rounded-bl-md p-3 shadow-ambient border border-outline-variant/20">
+<p class="text-body-md font-body-md text-on-surface">Ainda dá tempo de somar no jantar da Lapa! Comprei 2 ingressos (30 reais cada), quem topa colar na Pedra do Sal comigo?</p>
+<div class="flex gap-2 mt-1.5">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">add_reaction</span>
+</div>
+</div>
+</div>
+</div>
+<!-- System / Votação Card -->
+<div class="flex justify-center">
+<div class="flex items-center gap-2.5 bg-surface-container-lowester border border-primary/15 px-4 py-2.5 rounded-full shadow-ambient">
+<span class="material-symbols-outlined text-[18px] text-primary">how_to_vote</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Votação aberta: <span class="font-bold text-primary">3 novos passeios para votar</span></p>
+<button class="text-label-sm font-label-sm font-bold text-primary" onclick="window.location.href='votacao.html'">Votar</button>
+</div>
+</div>
+<!-- Marina -->
+<div class="flex items-end gap-2.5">
+<img alt="Marina" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-lowest shrink-0" data-alt="Close up bright portrait of Marina with dark curls and a cheerful open smile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA70ZNxRlRBj3y5Mv3M0QF4vK3jMKOqvFLlbkkZJwBYpuNpEROo9bNvK27gLwehrQ2XsE-FNIQFAR1fr7rPyOUusHx3IDkCGN2xWccYrqAiNOgy_p9l1pmkdb-voCTJVREKORvL27yHU5nS2NOsr-NqHG8GAOF3IClmuib5yNJFl2EV8YV5rfF1U0oHjPIpNRMtLLFWUdX7mHHrSv1ZIaS-2NnyqBGhwR8gJQqLzwe0m69X6WyN3U1Eqg"/>
+<div class="max-w-[78%]">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-1"><span class="font-bold text-on-surface">Marina</span> <span class="text-outline">• 09:12</span></p>
+<div class="bg-surface-container-lowest rounded-2xl rounded-bl-md p-3 shadow-ambient border border-outline-variant/20">
+<p class="text-body-md font-body-md text-on-surface">Sim! Leva tudo: água, protetor e um agasalho pro vento na volta. A gente sai da Barra 9h.</p>
+</div>
+</div>
+</div>
+<!-- Felipe -->
+<div class="flex items-end gap-2.5">
+<img alt="Felipe" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-lowest shrink-0" data-alt="Candid headshot of Felipe smiling in a white linen shirt under tropical daytime outdoor sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqGTxtaegXpbvyFv7HL0LCal4b2J5dgNxS3iXgYdgyC_tdQcoEVbMBax1HYqyN-bpFCFMPfcePWazj71szHUVd0BHEKODwAUonhpSpfAjScs5-dGlU2OgAoFUnj80MxKzSdimOwExoS7BWJM-rw34i2Sqskopk3TMhfMIkuBSvVO_F5AexmML1SCket499s2NjYVNcbtouGsE3y5vz6m8pPyHYK6urhAlYyoX8Wc6aCZmItv9L-0sF8A"/>
+<div class="max-w-[78%]">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-1"><span class="font-bold text-on-surface">Felipe</span> <span class="text-outline">• 09:20</span></p>
+<div class="bg-surface-container-lowest rounded-2xl rounded-bl-md p-3 shadow-ambient border border-outline-variant/20">
+<p class="text-body-md font-body-md text-on-surface">Votado na trilha do Telégrafo também 🌄 Se o tempo abrir de manhã, dá pra encaixar antes do almoço no Bar do David.</p>
+<div class="flex items-center gap-1 mt-1.5">
+<span class="material-symbols-fill text-[16px] text-secondary">thumb_up</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">3 reações</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Date Divider -->
+<div class="flex items-center gap-3 pt-2">
+<span class="h-px bg-outline-variant/40 flex-1"></span>
+<span class="text-label-sm font-label-sm text-on-surface-variant px-3 py-1 rounded-full bg-surface-container-high">Ontem</span>
+<span class="h-px bg-outline-variant/40 flex-1"></span>
+</div>
+<!-- Rodrigo -->
+<div class="flex items-end gap-2.5">
+<img alt="Rodrigo" class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-lowest shrink-0" data-alt="Portrait of Rodrigo, fifth group traveler, smiling outdoors in Brazil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbtwJuCAW0jtCsG99ajU7vkJJub8LYIVN_tVubkPI3JJl07GYcwy4JNC8xNJ8zqg7JXhLMRDVdx1aLpbmfiywmmvng4dp2X3lap-hAEDZyB0GmRphmfhsQy5VUKL6ObSfZ9jg8yjMf0sTb7sdDCtxdGJC6AUKcGQfb7C045flEeOAR7u3T4PCXKdfD0imc6F4GOcf-X3V7SMxHxl-mXuel3e1Lbdr-lpeXT1ZcrQTdMbfVtk4AMjjTsw"/>
+<div class="max-w-[78%]">
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-1"><span class="font-bold text-on-surface">Rodrigo</span> <span class="text-outline">• Ontem, 22:41</span></p>
+<div class="bg-surface-container-lowest rounded-2xl rounded-bl-md p-3 shadow-ambient border border-outline-variant/20">
+<p class="text-body-md font-body-md text-on-surface">Consegui o Uber van pra gente na sexta! São 5 lugares, confirmei a partida do hostel às 8h10.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- INPUT BAR -->
+<div class="fixed bottom-16 left-0 w-full z-40 px-margin pointer-events-none">
+<div class="max-w-xl mx-auto bg-surface-container-lowest/95 backdrop-blur-md rounded-full shadow-modal border border-outline-variant/30 p-1.5 flex items-center gap-2 pointer-events-auto">
+<button aria-label="Anexar arquivo" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors active:scale-95">
+<span class="material-symbols-outlined">add</span>
+</button>
+<input class="flex-1 bg-transparent border-0 focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-outline min-w-0" placeholder="Mensagem para o grupo..." type="text"/>
+<button aria-label="Enviar mensagem" class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center hover:bg-secondary active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-fill text-[20px]">send</span>
+</button>
+</div>
+</div>
+<!-- BOTTOM NAV -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin py-space-xs pb-safe bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_-2px_rgba(10,77,104,0.06)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="index.html">
+<span class="material-symbols-outlined text-[22px]">flight_takeoff</span>
+<span class="text-label-sm font-label-sm">Viagens</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="votacao.html">
+<span class="material-symbols-outlined text-[22px]">explore</span>
+<span class="text-label-sm font-label-sm">Passeios</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="dia-a-dia.html">
+<span class="material-symbols-outlined text-[22px]">view_timeline</span>
+<span class="text-label-sm font-label-sm">Roteiro</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="perfil.html">
+<span class="material-symbols-outlined text-[22px]">account_circle</span>
+<span class="text-label-sm font-label-sm">Perfil</span>
+</a>
+</nav>
+</body></html>

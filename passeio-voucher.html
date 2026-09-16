@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WanderGroup - Voucher do Passeio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: { extend: {
+        "colors": {
+          "on-surface": "#111c2d", "secondary-container": "#fd6a49", "on-secondary": "#ffffff",
+          "secondary": "#ae3115", "primary-fixed-dim": "#76d4e7", "on-background": "#111c2d",
+          "tertiary-fixed-dim": "#98cded", "surface-bright": "#f9f9ff", "primary-container": "#008092",
+          "on-primary-container": "#f8fdff", "outline-variant": "#bdc8cb", "on-tertiary-container": "#00050b",
+          "on-secondary-fixed": "#3d0600", "on-surface-variant": "#3e494b", "surface-dim": "#cfdaf2",
+          "primary-fixed": "#a3eeff", "on-tertiary-fixed-variant": "#084c67", "on-primary": "#ffffff",
+          "error": "#ba1a1a", "surface-container-high": "#dee8ff", "surface": "#f9f9ff",
+          "on-error-container": "#93000a", "tertiary-container": "#477d9a", "tertiary-fixed": "#c3e8ff",
+          "surface-container-low": "#f0f3ff", "surface-container-lowest": "#ffffff", "secondary-fixed": "#ffdad2",
+          "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#8c1900",
+          "surface-container-highest": "#d8e3fb", "on-secondary-container": "#640f00", "inverse-on-surface": "#ecf1ff",
+          "outline": "#6e797c", "on-primary-fixed-variant": "#004e5a", "surface-tint": "#006877",
+          "surface-variant": "#d8e3fb", "on-tertiary-fixed": "#001e2c", "inverse-primary": "#76d4e7",
+          "on-error": "#ffffff", "background": "#f9f9ff", "inverse-surface": "#263143",
+          "surface-container": "#e7eeff", "secondary-fixed-dim": "#ffb4a3", "primary": "#006574",
+          "on-primary-fixed": "#001f25", "tertiary": "#2c6480"
+        },
+        "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        "spacing": { "margin": "1.25rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem" },
+        "fontFamily": {
+          "display-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+          "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+          "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+          "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+          "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+        }
+      } }
+    }
+  </script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; line-height: 1; }
+    .material-symbols-fill { font-variation-settings: 'FILL' 1; display: inline-block; vertical-align: middle; line-height: 1; }
+    .shadow-ambient { box-shadow: 0 4px 16px -2px rgba(10, 77, 104, 0.06), 0 2px 6px -1px rgba(10, 77, 104, 0.04); }
+    .shadow-modal { box-shadow: 0 12px 28px -4px rgba(8, 131, 149, 0.12), 0 6px 12px -2px rgba(10, 77, 104, 0.06); }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen pb-28">
+<header class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-margin py-space-sm bg-surface/85 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<a aria-label="Voltar para Passeios" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors duration-150 active:scale-95" href="votacao.html">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</a>
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider block">WanderGroup</span>
+<h1 class="text-headline-md font-headline-md font-bold text-primary leading-tight">Voucher</h1>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Compartilhar voucher" class="p-2 rounded-full text-primary hover:bg-surface-container-high active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[22px]">share</span>
+</button>
+</div>
+</header>
+<main class="pt-20 max-w-md mx-auto px-margin space-y-space-lg">
+<!-- STATUS TICKER -->
+<div class="flex items-center justify-center gap-2 bg-emerald-50 text-emerald-800 rounded-full py-2 px-4">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span class="text-label-sm font-label-sm font-bold">Compra confirmada</span>
+<span class="text-label-sm font-label-sm text-emerald-600">• em nome de Marina</span>
+</div>
+<!-- VOUCHER CARD -->
+<section class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-modal border border-outline-variant/20">
+<div class="relative w-full h-44">
+<img alt="Cristo Redentor" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA23BGgUDxTTrrO8gLRXsX0dvZH5ut2JE0ISAcR_KolzQcjJfh7ne45QQZfFEE--sny75piadHvM8MqMfpOCdubQGyFthDAj2pTjKk8BCdYz9zecM-AQSNi9VAFpdXJuThc7buo_-KUItaiV3WIZOLFNzyZIt8xqZkUCsMyPK87Rs3bl8PZ1wQN3crjpWKPt0f1xdv8e2T2uVLUN9HocVqCiA3B76dto-bwDG2xEkgGN1sapa5dVdt9Yg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-end justify-between text-surface-bright">
+<div>
+<span class="text-label-sm font-label-sm text-primary-fixed uppercase tracking-wider">Cosme Velho • Rio de Janeiro</span>
+<h2 class="text-headline-md font-headline-md font-bold leading-tight">Entrada Cristo Redentor no Trem do Corcovado</h2>
+</div>
+</div>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">event</span> Sexta-feira, 14 de Novembro</span>
+<span class="font-bold text-on-surface">09:30</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">people</span> 5 viajantes</span>
+<span class="font-bold text-on-surface">R$ 575 total</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">confirmation_number</span> Reserva</span>
+<span class="font-bold text-on-surface">#CR-8842-109</span>
+</div>
+<!-- QR Code Placeholder -->
+<div class="rounded-2xl border-2 border-dashed border-outline-variant/50 bg-surface-container-low p-4 flex items-center justify-center gap-4">
+<div class="w-20 h-20 rounded-xl bg-surface-container-lowest ring-1 ring-outline-variant/40 flex items-center justify-center">
+<span class="material-symbols-outlined text-[40px] text-on-surface-variant">qr_code</span>
+</div>
+<div>
+<p class="text-label-md font-label-md font-bold text-on-surface">Código QR do grupo</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Apresente na entrada do trem.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- GROUP TICKETS -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">confirmation_number</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Ingressos do grupo</h3>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold px-2 py-0.5 rounded-full bg-surface-container">5</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-ambient border border-outline-variant/20 divide-y divide-outline-variant/15">
+<div class="flex items-center justify-between p-3.5">
+<div class="flex items-center gap-2.5">
+<img alt="Lucas" class="w-8 h-8 rounded-full object-cover" data-alt="Casual portrait photo of Lucas wearing summer vacation clothes under sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUWyzilHHWfgTRDwGFl2r48aQjJqnUk5k0cA8qXVKU-2c7idfc8ztFQ5He159jidOfIPVX3Qmt18i4DV5lxc1DWHITEwHTNtuugWrUbdmSX-VBXst_mJ_Mtc4AhzbTRhuG6vvWxXGXo-PwRbmiYtlzmPg3yIXSy00Jyo2-NH30rorP9eY1Y3ViXSXWEI7oPp9_Jsa82XyvY-Oo0JQE9m8wIouprKp_YjxSYncgmXP4jnGCXRovk8hGQ"/>
+<p class="text-label-md font-label-md font-bold text-on-surface">Lucas</p>
+</div>
+<span class="text-label-sm font-label-sm text-emerald-700 font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">check</span> Usado</span>
+</div>
+<div class="flex items-center justify-between p-3.5">
+<div class="flex items-center gap-2.5">
+<img alt="Marina" class="w-8 h-8 rounded-full object-cover" data-alt="Sunlit close-up avatar of Mariana smiling gently outdoors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-l5ifJCboo_RsDmdF949JCRCdmDvtiGxqle3kOW-FY5XBsp8GRe0PjZYhNLGQDULB-lrrykGcfniTbovJy6XFnakElfUcvGnU8rXBhZI-Tcd0qLmWJ_xKcXEvOdbSIini29gPOlVgP15VTQpufbiUSgQO-zya59Jw09ZiTgQkY9mkaK9eB8rLLcWA9Qn2eUFH7CWmgcYlFmRBHZohUM41y1gAO6JCoSpV24IZcuDZpZnQ7RCz9JXkCg"/>
+<p class="text-label-md font-label-md font-bold text-on-surface">Marina</p>
+</div>
+<span class="text-label-sm font-label-sm text-emerald-700 font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">check</span> Usado</span>
+</div>
+<div class="flex items-center justify-between p-3.5">
+<div class="flex items-center gap-2.5">
+<img alt="Felipe" class="w-8 h-8 rounded-full object-cover" data-alt="Portrait photo of Felipe with beach sunglasses smiling in sunshine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCKKfp67mhmJQj8STL65kiv-la8kqRVG-SH7-f9DEYCmOEQ5tkSQhN8gRtlIDy4aG2fz__QPnahxkX16IdKG3N675nSi7LdHlSONLlURbrtbdnDNmOo8PM8uKsfLwdsmTIVedQ5_wlQO-ZD_TVORCgsB1ggNjAtWrejJGZF9t0R9nfmupmxDbXw3FOq3CxS-xPIy2Evm2NCEQs-9JBoKFRQmBtwSvEGjhyYrY0GVGml-4yGQVr4LD1Ow"/>
+<p class="text-label-md font-label-md font-bold text-on-surface">Felipe</p>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Não utilizado</span>
+</div>
+<div class="flex items-center justify-between p-3.5">
+<div class="flex items-center gap-2.5">
+<img alt="Bia" class="w-8 h-8 rounded-full object-cover" data-alt="Portrait of Beatriz smiling in warm natural daylight during beach vacation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3VanUukMrOzs0BdHfwQxY7M1fKPRrRDWDQl-7DjFYO2VnxydoPAhlC0ka7uwnc9otJMF2kP7TA-In4Jugc1zpUyMktvOGMlGhwrD7ItJoirXNbr4Ms7gNPWrdFUa8mfeMvbrP606lv2hTgUfYuhGSu-O1i-IFf_uJXdkM-IF5zdM9D4_HEFamhoY1onX2XiDz6LPqA1ULEn6kaBu6n6pU1f_XdSbimu2K2D27-b_TBtirexHb-eQBNQ"/>
+<p class="text-label-md font-label-md font-bold text-on-surface">Bia</p>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Não utilizado</span>
+</div>
+</div>
+</section>
+<!-- NOTES -->
+<section>
+<div class="bg-surface-container-low rounded-2xl p-4 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">info</span>
+<div>
+<p class="text-body-sm font-body-sm text-on-surface">Chegue 20 min antes. O trem sai do Cosme Velho a cada 30 min e o grupo embarca junto na sessão das 09:30.</p>
+</div>
+</div>
+</section>
+<!-- ACTIONS -->
+<div class="flex gap-2">
+<button class="flex-1 h-12 rounded-full bg-primary text-on-primary font-label-md font-label-md flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">download</span>
+Baixar PDF
+</button>
+<button class="h-12 px-4 rounded-full bg-secondary-container text-on-secondary font-label-md font-label-md flex items-center justify-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">ios_share</span>
+Compartilhar
+</button>
+</div>
+</main>
+<!-- BOTTOM NAV -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin py-space-xs pb-safe bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_-2px_rgba(10,77,104,0.06)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="index.html">
+<span class="material-symbols-outlined text-[22px]">flight_takeoff</span><span class="text-label-sm font-label-sm">Viagens</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary rounded-full px-space-md py-space-xs shadow-sm active:scale-95 transition-transform duration-150" href="votacao.html">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">explore</span><span class="text-label-sm font-label-sm mt-0.5 font-bold">Passeios</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="dia-a-dia.html">
+<span class="material-symbols-outlined text-[22px]">view_timeline</span><span class="text-label-sm font-label-sm">Roteiro</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="perfil.html">
+<span class="material-symbols-outlined text-[22px]">account_circle</span><span class="text-label-sm font-label-sm">Perfil</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WanderGroup - Divisão de Gastos</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#111c2d",
+            "secondary-container": "#fd6a49",
+            "on-secondary": "#ffffff",
+            "secondary": "#ae3115",
+            "primary-fixed-dim": "#76d4e7",
+            "on-background": "#111c2d",
+            "tertiary-fixed-dim": "#98cded",
+            "surface-bright": "#f9f9ff",
+            "primary-container": "#008092",
+            "on-primary-container": "#f8fdff",
+            "outline-variant": "#bdc8cb",
+            "on-tertiary-container": "#00050b",
+            "on-secondary-fixed": "#3d0600",
+            "on-surface-variant": "#3e494b",
+            "surface-dim": "#cfdaf2",
+            "primary-fixed": "#a3eeff",
+            "on-tertiary-fixed-variant": "#084c67",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#dee8ff",
+            "surface": "#f9f9ff",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#477d9a",
+            "tertiary-fixed": "#c3e8ff",
+            "surface-container-low": "#f0f3ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdad2",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#8c1900",
+            "surface-container-highest": "#d8e3fb",
+            "on-secondary-container": "#640f00",
+            "inverse-on-surface": "#ecf1ff",
+            "outline": "#6e797c",
+            "on-primary-fixed-variant": "#004e5a",
+            "surface-tint": "#006877",
+            "surface-variant": "#d8e3fb",
+            "on-tertiary-fixed": "#001e2c",
+            "inverse-primary": "#76d4e7",
+            "on-error": "#ffffff",
+            "background": "#f9f9ff",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "secondary-fixed-dim": "#ffb4a3",
+            "primary": "#006574",
+            "on-primary-fixed": "#001f25",
+            "tertiary": "#2c6480"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .shadow-ambient {
+      box-shadow: 0 4px 16px -2px rgba(10, 77, 104, 0.06), 0 2px 6px -1px rgba(10, 77, 104, 0.04);
+    }
+    .shadow-modal {
+      box-shadow: 0 12px 28px -4px rgba(8, 131, 149, 0.12), 0 6px 12px -2px rgba(10, 77, 104, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen pb-28">
+<!-- TOP APP BAR -->
+<header class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-margin py-space-sm bg-surface/85 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<a aria-label="Voltar para a Viagem" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors duration-150 active:scale-95" href="hub-da-viagem.html">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</a>
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider block">WanderGroup</span>
+<h1 class="text-headline-md font-headline-md font-bold text-primary leading-tight">Divisão de Gastos</h1>
+</div>
+</div>
+<button aria-label="Adicionar Gasto" class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center hover:bg-secondary active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[22px]">add</span>
+</button>
+</header>
+<main class="pt-20 max-w-xl mx-auto px-margin space-y-space-lg">
+<!-- SUMMARY CARD -->
+<section class="bg-surface-container-lowest rounded-3xl p-5 shadow-modal border border-primary/10">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Total Estimado</p>
+<h2 class="text-display-lg font-display-lg text-on-surface leading-tight mt-0.5">R$ 3.420</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">R$ 684 por pessoa • 5 viajantes</p>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[28px]">payments</span>
+</div>
+</div>
+<div class="mt-4 grid grid-cols-3 gap-2 text-center">
+<div class="bg-surface-container-low rounded-xl py-2.5">
+<span class="block text-label-sm font-label-sm text-on-surface-variant">Pago</span>
+<span class="block text-body-lg font-body-lg font-bold text-primary">R$ 1.960</span>
+</div>
+<div class="bg-surface-container-low rounded-xl py-2.5">
+<span class="block text-label-sm font-label-sm text-on-surface-variant">Pendente</span>
+<span class="block text-body-lg font-body-lg font-bold text-secondary">R$ 1.460</span>
+</div>
+<div class="bg-surface-container-low rounded-xl py-2.5">
+<span class="block text-label-sm font-label-sm text-on-surface-variant">Reservas</span>
+<span class="block text-body-lg font-body-lg font-bold text-on-surface">4</span>
+</div>
+</div>
+</section>
+<!-- BALANCES / QUEM DEVE A QUEM -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">balance</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Quem deve a quem</h3>
+</div>
+<span class="text-label-sm font-label-sm text-emerald-700 font-bold px-2 py-0.5 rounded-full bg-emerald-50 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Em dia
+</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-ambient border border-outline-variant/20 divide-y divide-outline-variant/15">
+<div class="flex items-center gap-3 py-2.5">
+<img alt="Lucas" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container" data-alt="Casual portrait photo of Lucas wearing summer vacation clothes under sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrUWyzilHHWfgTRDwGFl2r48aQjJqnUk5k0cA8qXVKU-2c7idfc8ztFQ5He159jidOfIPVX3Qmt18i4DV5lxc1DWHITEwHTNtuugWrUbdmSX-VBXst_mJ_Mtc4AhzbTRhuG6vvWxXGXo-PwRbmiYtlzmPg3yIXSy00Jyo2-NH30rorP9eY1Y3ViXSXWEI7oPp9_Jsa82XyvY-Oo0JQE9m8wIouprKp_YjxSYncgmXP4jnGCXRovk8hGQ"/>
+<div class="flex-1 min-w-0">
+<p class="text-body-md font-body-md font-bold text-on-surface">Você (Lucas)</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Pagou R$ 960 • deve R$ 316</p>
+</div>
+<span class="text-label-md font-label-md font-bold text-secondary rounded-full bg-secondary-fixed/50 px-3 py-1">Deve R$ 316</span>
+</div>
+<div class="flex items-center gap-3 py-2.5">
+<img alt="Marina" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container" data-alt="Sunlit close-up avatar of Mariana smiling gently outdoors, tropical clear atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-l5ifJCboo_RsDmdF949JCRCdmDvtiGxqle3kOW-FY5XBsp8GRe0PjZYhNLGQDULB-lrrykGcfniTbovJy6XFnakElfUcvGnU8rXBhZI-Tcd0qLmWJ_xKcXEvOdbSIini29gPOlVgP15VTQpufbiUSgQO-zya59Jw09ZiTgQkY9mkaK9eB8rLLcWA9Qn2eUFH7CWmgcYlFmRBHZohUM41y1gAO6JCoSpV24IZcuDZpZnQ7RCz9JXkCg"/>
+<div class="flex-1 min-w-0">
+<p class="text-body-md font-body-md font-bold text-on-surface">Marina</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Pagou R$ 1.180 • deve R$ 496</p>
+</div>
+<span class="text-label-md font-label-md font-bold text-emerald-700 rounded-full bg-emerald-50 px-3 py-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">south_west</span>A receber R$ 496
+</span>
+</div>
+<div class="flex items-center gap-3 py-2.5">
+<img alt="Felipe" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container" data-alt="Portrait photo of Felipe with beach sunglasses smiling in sunshine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCKKfp67mhmJQj8STL65kiv-la8kqRVG-SH7-f9DEYCmOEQ5tkSQhN8gRtlIDy4aG2fz__QPnahxkX16IdKG3N675nSi7LdHlSONLlURbrtbdnDNmOo8PM8uKsfLwdsmTIVedQ5_wlQO-ZD_TVORCgsB1ggNjAtWrejJGZF9t0R9nfmupmxDbXw3FOq3CxS-xPIy2Evm2NCEQs-9JBoKFRQmBtwSvEGjhyYrY0GVGml-4yGQVr4LD1Ow"/>
+<div class="flex-1 min-w-0">
+<p class="text-body-md font-body-md font-bold text-on-surface">Felipe</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Pagou R$ 220 • deve R$ 464</p>
+</div>
+<span class="text-label-md font-label-md font-bold text-secondary rounded-full bg-secondary-fixed/50 px-3 py-1">Deve R$ 464</span>
+</div>
+<div class="flex items-center gap-3 py-2.5">
+<img alt="Bia" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container" data-alt="Portrait of Beatriz smiling in warm natural daylight during beach vacation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3VanUukMrOzs0BdHfwQxY7M1fKPRrRDWDQl-7DjFYO2VnxydoPAhlC0ka7uwnc9otJMF2kP7TA-In4Jugc1zpUyMktvOGMlGhwrD7ItJoirXNbr4Ms7gNPWrdFUa8mfeMvbrP606lv2hTgUfYuhGSu-O1i-IFf_uJXdkM-IF5zdM9D4_HEFamhoY1onX2XiDz6LPqA1ULEn6kaBu6n6pU1f_XdSbimu2K2D27-b_TBtirexHb-eQBNQ"/>
+<div class="flex-1 min-w-0">
+<p class="text-body-md font-body-md font-bold text-on-surface">Bia</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Pagou R$ 60 • deve R$ 624</p>
+</div>
+<span class="text-label-md font-label-md font-bold text-secondary rounded-full bg-secondary-fixed/50 px-3 py-1">Deve R$ 624</span>
+</div>
+<div class="flex items-center gap-3 py-2.5">
+<img alt="Rodrigo" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary-container" data-alt="Portrait of Rodrigo, fifth group traveler, smiling outdoors in Brazil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbtwJuCAW0jtCsG99ajU7vkJJub8LYIVN_tVubkPI3JJl07GYcwy4JNC8xNJ8zqg7JXhLMRDVdx1aLpbmfiywmmvng4dp2X3lap-hAEDZyB0GmRphmfhsQy5VUKL6ObSfZ9jg8yjMf0sTb7sdDCtxdGJC6AUKcGQfb7C045flEeOAR7u3T4PCXKdfD0imc6F4GOcf-X3V7SMxHxl-mXuel3e1Lbdr-lpeXT1ZcrQTdMbfVtk4AMjjTsw"/>
+<div class="flex-1 min-w-0">
+<p class="text-body-md font-body-md font-bold text-on-surface">Rodrigo</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Não pagou nada ainda</p>
+</div>
+<span class="text-label-md font-label-md font-bold text-secondary rounded-full bg-secondary-fixed/50 px-3 py-1">Deve R$ 684</span>
+</div>
+</div>
+</section>
+<!-- EXPENSE LIST -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">receipt_long</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Gastos da Viagem</h3>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold px-2 py-0.5 rounded-full bg-surface-container">5 itens</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-ambient border border-outline-variant/20 divide-y divide-outline-variant/15">
+<!-- Expense 1 -->
+<button class="w-full flex items-center gap-3 p-3.5 hover:bg-surface-container-low transition-colors active:scale-[0.99]">
+<div class="w-11 h-11 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">sailing</span>
+</div>
+<div class="flex-1 min-w-0 text-left">
+<p class="text-label-md font-label-md font-bold text-on-surface">Escuna Ilhas Tijucas</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Marina pagou • 14 Nov</p>
+</div>
+<div class="text-right">
+<p class="text-label-md font-label-md font-bold text-on-surface">R$ 800</p>
+<span class="text-label-sm font-label-sm text-emerald-700">R$ 160/pessoa</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<!-- Expense 2 -->
+<button class="w-full flex items-center gap-3 p-3.5 hover:bg-surface-container-low transition-colors active:scale-[0.99]">
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">confirmation_number</span>
+</div>
+<div class="flex-1 min-w-0 text-left">
+<p class="text-label-md font-label-md font-bold text-on-surface">Entrada Cristo Redentor</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Lucas pagou • 14 Nov</p>
+</div>
+<div class="text-right">
+<p class="text-label-md font-label-md font-bold text-on-surface">R$ 575</p>
+<span class="text-label-sm font-label-sm text-on-surface-variant">5x R$ 115</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<!-- Expense 3 -->
+<button class="w-full flex items-center gap-3 p-3.5 hover:bg-surface-container-low transition-colors active:scale-[0.99]">
+<div class="w-11 h-11 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">directions_bus</span>
+</div>
+<div class="flex-1 min-w-0 text-left">
+<p class="text-label-md font-label-md font-bold text-on-surface">Uber Van Aeroporto</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Lucas pagou • 13 Nov</p>
+</div>
+<div class="text-right">
+<p class="text-label-md font-label-md font-bold text-on-surface">R$ 385</p>
+<span class="text-label-sm font-label-sm text-emerald-700">Confirmado</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<!-- Expense 4 -->
+<button class="w-full flex items-center gap-3 p-3.5 hover:bg-surface-container-low transition-colors active:scale-[0.99]">
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">restaurant</span>
+</div>
+<div class="flex-1 min-w-0 text-left">
+<p class="text-label-md font-label-md font-bold text-on-surface">Ingressos Jantar Lapa</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Bia pagou • 14 Nov</p>
+</div>
+<div class="text-right">
+<p class="text-label-md font-label-md font-bold text-on-surface">R$ 60</p>
+<span class="text-label-sm font-label-sm text-on-surface-variant">2x R$ 30</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+<!-- Expense 5 (Pendente) -->
+<button class="w-full flex items-center gap-3 p-3.5 hover:bg-surface-container-low transition-colors active:scale-[0.99]">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[22px]">local_dining</span>
+</div>
+<div class="flex-1 min-w-0 text-left">
+<p class="text-label-md font-label-md font-bold text-on-surface">Almoço Bar do David</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Pendente • estimado</p>
+</div>
+<div class="text-right">
+<p class="text-label-md font-label-md font-bold text-on-surface">~R$ 300</p>
+<span class="text-label-sm font-label-sm text-secondary">A dividir</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">chevron_right</span>
+</button>
+</div>
+<button class="w-full py-3 rounded-2xl border-2 border-dashed border-outline-variant/50 text-primary text-label-md font-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+Lançar novo gasto
+</button>
+</section>
+<!-- SUGGESTED SETTLING -->
+<section class="pb-4">
+<div class="bg-primary-container/10 border border-primary/15 rounded-2xl p-4 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">lightbulb</span>
+<div>
+<p class="text-label-md font-label-md font-bold text-on-surface">Sugestão de acerto</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Marina receberia R$ 496 na divisão final. Lucas devolve R$ 316 e ajuda a fechar o rateio de hoje.</p>
+<button class="mt-2 px-4 py-2 rounded-full bg-primary text-on-primary text-label-sm font-label-sm font-bold shadow-sm hover:bg-primary-container active:scale-95 transition-all">Ver plano de acerto</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BOTTOM NAV -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin py-space-xs pb-safe bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_-2px_rgba(10,77,104,0.06)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="index.html">
+<span class="material-symbols-outlined text-[22px]">flight_takeoff</span>
+<span class="text-label-sm font-label-sm">Viagens</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="votacao.html">
+<span class="material-symbols-outlined text-[22px]">explore</span>
+<span class="text-label-sm font-label-sm">Passeios</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="dia-a-dia.html">
+<span class="material-symbols-outlined text-[22px]">view_timeline</span>
+<span class="text-label-sm font-label-sm">Roteiro</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="perfil.html">
+<span class="material-symbols-outlined text-[22px]">account_circle</span>
+<span class="text-label-sm font-label-sm">Perfil</span>
+</a>
+</nav>
+</body></html>

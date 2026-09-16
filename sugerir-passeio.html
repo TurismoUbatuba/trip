@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WanderGroup - Sugerir Passeio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: { extend: {
+        "colors": {
+          "on-surface": "#111c2d", "secondary-container": "#fd6a49", "on-secondary": "#ffffff",
+          "secondary": "#ae3115", "primary-fixed-dim": "#76d4e7", "on-background": "#111c2d",
+          "tertiary-fixed-dim": "#98cded", "surface-bright": "#f9f9ff", "primary-container": "#008092",
+          "on-primary-container": "#f8fdff", "outline-variant": "#bdc8cb", "on-tertiary-container": "#00050b",
+          "on-secondary-fixed": "#3d0600", "on-surface-variant": "#3e494b", "surface-dim": "#cfdaf2",
+          "primary-fixed": "#a3eeff", "on-tertiary-fixed-variant": "#084c67", "on-primary": "#ffffff",
+          "error": "#ba1a1a", "surface-container-high": "#dee8ff", "surface": "#f9f9ff",
+          "on-error-container": "#93000a", "tertiary-container": "#477d9a", "tertiary-fixed": "#c3e8ff",
+          "surface-container-low": "#f0f3ff", "surface-container-lowest": "#ffffff", "secondary-fixed": "#ffdad2",
+          "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#8c1900",
+          "surface-container-highest": "#d8e3fb", "on-secondary-container": "#640f00", "inverse-on-surface": "#ecf1ff",
+          "outline": "#6e797c", "on-primary-fixed-variant": "#004e5a", "surface-tint": "#006877",
+          "surface-variant": "#d8e3fb", "on-tertiary-fixed": "#001e2c", "inverse-primary": "#76d4e7",
+          "on-error": "#ffffff", "background": "#f9f9ff", "inverse-surface": "#263143",
+          "surface-container": "#e7eeff", "secondary-fixed-dim": "#ffb4a3", "primary": "#006574",
+          "on-primary-fixed": "#001f25", "tertiary": "#2c6480"
+        },
+        "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        "spacing": { "margin": "1.25rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem" },
+        "fontFamily": {
+          "display-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"],
+          "label-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+          "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+          "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+          "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+          "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+        }
+      } }
+    }
+  </script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; line-height: 1; }
+    .material-symbols-fill { font-variation-settings: 'FILL' 1; display: inline-block; vertical-align: middle; line-height: 1; }
+    .shadow-ambient { box-shadow: 0 4px 16px -2px rgba(10, 77, 104, 0.06), 0 2px 6px -1px rgba(10, 77, 104, 0.04); }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen pb-28">
+<header class="fixed top-0 left-0 w-full z-40 flex justify-between items-center gap-2 px-margin py-space-sm bg-surface/85 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<a aria-label="Voltar para Passeios" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors duration-150 active:scale-95 shrink-0" href="votacao.html">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</a>
+<div class="min-w-0">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider block">WanderGroup</span>
+<h1 class="text-headline-md font-headline-md font-bold text-primary leading-tight truncate">Sugerir Passeio</h1>
+</div>
+</div>
+</header>
+<main class="pt-20 max-w-md mx-auto px-margin space-y-space-lg">
+<!-- INTRO -->
+<section class="bg-surface-container-lowest rounded-3xl p-5 shadow-ambient border border-primary/10 space-y-4">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-secondary-container/15 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[22px]">add_location_alt</span>
+</div>
+<div>
+<h2 class="text-headline-md font-headline-md text-on-surface">Proponha uma experiência</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">O grupo vai votar na sua sugestão.</p>
+</div>
+</div>
+<!-- Nome -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-on-surface" for="nomePasseio">Nome do passeio</label>
+<input class="w-full h-[52px] px-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-secondary-container focus:ring-0 text-body-md font-body-md" id="nomePasseio" placeholder="Ex.: Passeio de caiaque na Lagoa" type="text"/>
+</div>
+<!-- Categoria -->
+<div class="space-y-2">
+<span class="block text-label-md font-label-md text-on-surface">Categoria</span>
+<div class="flex flex-wrap gap-2">
+<button class="h-[34px] px-3.5 rounded-full bg-primary text-on-primary text-label-sm font-label-sm flex items-center gap-1.5 shadow-sm active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">hiking</span> Natureza
+</button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant text-label-sm font-label-sm flex items-center gap-1.5 hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">sailing</span> Náutico
+</button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant text-label-sm font-label-sm flex items-center gap-1.5 hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">restaurant</span> Gastronomia
+</button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant text-label-sm font-label-sm flex items-center gap-1.5 hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">nightlife</span> Vida Noturna
+</button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant text-label-sm font-label-sm flex items-center gap-1.5 hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">museum</span> Cultura
+</button>
+</div>
+</div>
+<!-- Custo -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-on-surface" for="custoPasseio">Custo por pessoa (R$)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">payments</span>
+<input class="w-full h-[52px] pl-11 pr-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-secondary-container focus:ring-0 text-body-md font-body-md" id="custoPasseio" placeholder="0 = gratuito" type="number"/>
+</div>
+</div>
+<!-- Duração -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-on-surface" for="duracaoPasseio">Duração estimada</label>
+<select class="w-full h-[52px] px-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-primary focus:ring-0 text-body-md font-body-md" id="duracaoPasseio">
+<option>Menos de 2 horas</option>
+<option>Meio período (2–4 h)</option>
+<option>Dia inteiro</option>
+<option>Atividade noturna</option>
+</select>
+</div>
+<!-- Dia sugerido -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-on-surface" for="diaPasseio">Melhor dia do roteiro</label>
+<select class="w-full h-[52px] px-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-primary focus:ring-0 text-body-md font-body-md" id="diaPasseio">
+<option>Qualquer dia</option>
+<option>Sex 14/11 - Dia 1</option>
+<option selected="">Sáb 15/11 - Dia 2</option>
+<option>Dom 16/11 - Dia 3</option>
+<option>Seg 17/11 - Dia 4</option>
+</select>
+</div>
+<!-- Descricao -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-on-surface" for="descPasseio">Por que o grupo vai amar?</label>
+<textarea class="w-full min-h-[96px] px-4 py-3 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-secondary-container focus:ring-0 text-body-md font-body-md resize-none" id="descPasseio" placeholder="Conte um pouco da experiência..."></textarea>
+</div>
+<!-- Foto -->
+<button class="w-full py-3 rounded-2xl border-2 border-dashed border-outline-variant/50 text-primary text-label-md font-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_photo_alternate</span>
+Adicionar foto
+</button>
+</section>
+<!-- SUBMIT -->
+<div class="pb-2">
+<button class="w-full min-h-[52px] py-3.5 px-6 rounded-full bg-secondary-container text-on-secondary font-headline-sm font-headline-sm flex items-center justify-center gap-2 shadow-ambient active:scale-[0.98] transition-transform duration-150" onclick="window.location.href='votacao.html'">
+<span class="material-symbols-outlined text-[20px]">how_to_vote</span>
+Enviar para votação
+</button>
+<p class="text-center text-[11px] text-outline mt-2">Todos os membros do grupo serão notificados para votar.</p>
+</div>
+</main>
+<!-- BOTTOM NAV -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin py-space-xs pb-safe bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_-2px_rgba(10,77,104,0.06)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="index.html">
+<span class="material-symbols-outlined text-[22px]">flight_takeoff</span><span class="text-label-sm font-label-sm">Viagens</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary rounded-full px-space-md py-space-xs shadow-sm active:scale-95 transition-transform duration-150" href="votacao.html">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">explore</span><span class="text-label-sm font-label-sm mt-0.5 font-bold">Passeios</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="dia-a-dia.html">
+<span class="material-symbols-outlined text-[22px]">view_timeline</span><span class="text-label-sm font-label-sm">Roteiro</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="perfil.html">
+<span class="material-symbols-outlined text-[22px]">account_circle</span><span class="text-label-sm font-label-sm">Perfil</span>
+</a>
+</nav>
+</body></html>
