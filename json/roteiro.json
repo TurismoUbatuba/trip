@@ -1,0 +1,319 @@
+{
+  "viagem": {
+    "titulo": "Roteiro da Viagem - Rio de Janeiro",
+    "tipo": "Viagem Coletiva",
+    "destino": "Rio de Janeiro",
+    "subtitulo": "Cidade Maravilhosa",
+    "dataInicio": "2025-11-14",
+    "dataFim": "2025-11-20",
+    "dataInicioFmt": "14 a 20 Nov",
+    "totalDias": 7,
+    "descricao": "Criado em conjunto • 5 amigos explorando a Cidade Maravilhosa",
+    "totalAtividades": 8,
+    "diaAtivo": 2,
+    "custoTotal": 3420,
+    "custoPorPessoa": 684,
+    "descricaoCusto": "Inclui 8 atividades reservadas e estimativas de alimentação."
+  },
+  "viajantes": [
+    {
+      "id": "mariana",
+      "nome": "Mariana",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCkeIPljUCPnQr7XSrvUmdFaSJWix2S6FGjhHBQUQj_RV-3_uz7mw6EiQ34MkZmTEWBzz-wN8zqfkRR2KDiBIeWzw5OTY7XX1KjUBmPETu70L7oGjmB1g4oRbsOj8IxPlO6GT4AOArROjnpWZeS_HXwp0trnjfuXxYavv3NbnPl3A96BXG_k6q-xAEedXKjePMX_e6AHPIrPEUJhYfnCdmaMQZOtg-MVs5X3hkWq1oWSwIUodU5psKibA",
+      "avatarAlt": "Close up photographic portrait of Mariana smiling warmly in natural sunny outdoor lighting, wearing a bright turquoise beach sunhat."
+    },
+    {
+      "id": "felipe",
+      "nome": "Felipe",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDXK9JKwEBmnBufNy5tenfFggfb7joVZH3aN3gq3eX_g52UV3M7p8mvhKNJGwCmMkbMjnp7bgwJp0hT7KWKZXuyREytpUgSsnoM_g3W01FH4KA_MCd-34q5jav7Zd4mBz80Utsr1grWsFMWrwWkPxWMCTmOeFIqQ_tHbcbnUu657Y9qOlhLAuXKUsAyCvQvQx4EHlc4PNYQqABZq-yHdGhpeQqy70QocXYVakJdKNF9PWcQ7JMhE4irag",
+      "avatarAlt": "Portrait photo of Felipe with sunglasses sitting on his head at Copacabana beach, relaxed sunny daylight atmosphere."
+    },
+    {
+      "id": "beatriz",
+      "nome": "Beatriz",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAfpoyAKPJoBtyOmdnVkWbFukFI03Nr_tKb1jzebNWB0PNsY1Fl9MmP-SOaO0ETMKr-uKWAMXTUovy2uxedbSvvYMOVXp3tHxVfeSr5FBeAg72N4NtQXxYCEKrga5O56WFgRMAfNxW1YznmNuKa754J2VXt6Z85boq-Z2M1NS-GLFGdjF5TszVe0eGyNKSwD38Q8XcozisdSDJ1p-vMdd31T4xkFW43o3VO0OlFSdkdWzQubdMHtxMkag",
+      "avatarAlt": "Portrait of Beatriz smiling on a summer balcony overlooking Guanabara Bay in Rio, warm cinematic golden-hour sunlight."
+    },
+    {
+      "id": "lucas",
+      "nome": "Lucas",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCuSpXTUx7e1S996E6nG2wmqUjqGojzzonLVIfpwfiZeOpMnmXTkCc4l4jOSKOb4sKRgJ_H1-wW92PKdimTnR6Xynlje_V06-otFH5POjzUGC8O146TJ8v9GMAAynM8ne6VLmbAQxo1XTah3tJPst4P-0BeyPLPyHsEgmagik0NqoJIFyYMFodtVom8wMvbOBxnz-iAdUk3IHJHgyWiA2hCEGnim4hfaMQ8fLOdlCa-gP61LEs2RD0wvg",
+      "avatarAlt": "Casual portrait photo of Lucas wearing a lightweight linen shirt, outdoors under clear sunny blue sky in Brazil."
+    },
+    {
+      "id": "rodrigo",
+      "nome": "Rodrigo",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbtwJuCAW0jtCsG99ajU7vkJJub8LYIVN_tVubkPI3JJl07GYcwy4JNC8xNJ8zqg7JXhLMRDVdx1aLpbmfiywmmvng4dp2X3lap-hAEDZyB0GmRphmfhsQy5VUKL6ObSfZ9jg8yjMf0sTb7sdDCtxdGJC6AUKcGQfb7C045flEeOAR7u3T4PCXKdfD0imc6F4GOcf-X3V7SMxHxl-mXuel3e1Lbdr-lpeXT1ZcrQTdMbfVtk4AMjjTsw",
+      "avatarAlt": "Portrait of Rodrigo, fifth group traveler, smiling outdoors in Brazil."
+    }
+  ],
+  "dias": [
+    {
+      "numero": 1,
+      "dataFmt": "14/11",
+      "diaSemana": "Sex",
+      "dataCompleta": "Sexta-feira, 14 de Novembro",
+      "ehFeriado": false,
+      "feriadoNome": null,
+      "selecionado": false,
+      "totalAtividades": 0,
+      "custoDia": 0
+    },
+    {
+      "numero": 2,
+      "dataFmt": "15/11",
+      "diaSemana": "Sáb",
+      "dataCompleta": "Sábado, 15 de Novembro",
+      "ehFeriado": true,
+      "feriadoNome": "Feriado Nacional",
+      "selecionado": true,
+      "totalAtividades": 4,
+      "custoDia": 220
+    },
+    {
+      "numero": 3,
+      "dataFmt": "16/11",
+      "diaSemana": "Dom",
+      "dataCompleta": "Domingo, 16 de Novembro",
+      "ehFeriado": false,
+      "feriadoNome": null,
+      "selecionado": false,
+      "totalAtividades": 0,
+      "custoDia": 0
+    },
+    {
+      "numero": 4,
+      "dataFmt": "17/11",
+      "diaSemana": "Seg",
+      "dataCompleta": "Segunda-feira, 17 de Novembro",
+      "ehFeriado": false,
+      "feriadoNome": null,
+      "selecionado": false,
+      "totalAtividades": 0,
+      "custoDia": 0
+    },
+    {
+      "numero": 5,
+      "dataFmt": "18/11",
+      "diaSemana": "Ter",
+      "dataCompleta": "Terça-feira, 18 de Novembro",
+      "ehFeriado": false,
+      "feriadoNome": null,
+      "selecionado": false,
+      "totalAtividades": 0,
+      "custoDia": 0
+    },
+    {
+      "numero": 6,
+      "dataFmt": "19/11",
+      "diaSemana": "Qua",
+      "dataCompleta": "Quarta-feira, 19 de Novembro",
+      "ehFeriado": false,
+      "feriadoNome": null,
+      "selecionado": false,
+      "totalAtividades": 0,
+      "custoDia": 0
+    },
+    {
+      "numero": 7,
+      "dataFmt": "20/11",
+      "diaSemana": "Qui",
+      "dataCompleta": "Quinta-feira, 20 de Novembro",
+      "ehFeriado": false,
+      "feriadoNome": null,
+      "selecionado": false,
+      "totalAtividades": 0,
+      "custoDia": 0
+    }
+  ],
+  "atividades": [
+    {
+      "id": "escuna",
+      "diaNumero": 2,
+      "horario": "09:00",
+      "titulo": "Passeio de Escuna Ilhas Tijucas",
+      "descricao": "Saída da Barra da Tijuca. Parada para mergulho em águas cristalinas, SUP e descanso com vista para a Pedra da Gávea.",
+      "icone": "sailing",
+      "preco": "R$ 160 / pessoa",
+      "precoEhEstimativa": false,
+      "status": "confirmado",
+      "statusLabel": "Confirmado (4 votos)",
+      "statusIcon": "verified",
+      "bordaCor": "primary",
+      "ehDestaque": false,
+      "nota": {
+        "icone": "receipt_long",
+        "iconeCor": "emerald-600",
+        "texto": "Marina reservou os ingressos"
+      },
+      "sugeridoPor": null,
+      "votos": null,
+      "horarioFlexivel": false,
+      "presentesLabel": "Confirmados:",
+      "presentesSuffix": null,
+      "presentes": [
+        {
+          "alt": "Sunlit close-up avatar of Marina smiling gently outdoors, tropical clear atmosphere in Rio de Janeiro.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuC-l5ifJCboo_RsDmdF949JCRCdmDvtiGxqle3kOW-FY5XBsp8GRe0PjZYhNLGQDULB-lrrykGcfniTbovJy6XFnakElfUcvGnU8rXBhZI-Tcd0qLmWJ_xKcXEvOdbSIini29gPOlVgP15VTQpufbiUSgQO-zya59Jw09ZiTgQkY9mkaK9eB8rLLcWA9Qn2eUFH7CWmgcYlFmRBHZohUM41y1gAO6JCoSpV24IZcuDZpZnQ7RCz9JXkCg"
+        },
+        {
+          "alt": "Portrait photo of Felipe with beach sunglasses, daylight outdoor vacation portrait.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDCKKfp67mhmJQj8STL65kiv-la8kqRVG-SH7-f9DEYCmOEQ5tkSQhN8gRtlIDy4aG2fz__QPnahxkX16IdKG3N675nSi7LdHlSONLlURbrtbdnDNmOo8PM8uKsfLwdsmTIVedQ5_wlQO-ZD_TVORCgsB1ggNjAtWrejJGZF9t0R9nfmupmxDbXw3FOq3CxS-xPIy2Evm2NCEQs-9JBoKFRQmBtwSvEGjhyYrY0GVGml-4yGQVr4LD1Ow"
+        },
+        {
+          "alt": "Portrait of Beatriz smiling in warm natural daylight during beach vacation.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuD3VanUukMrOzs0BdHfwQxY7M1fKPRrRDWDQl-7DjFYO2VnxydoPAhlC0ka7uwnc9otJMF2kP7TA-In4Jugc1zpUyMktvOGMlGhwrD7ItJoirXNbr4Ms7gNPWrdFUa8mfeMvbrP606lv2hTgUfYuhGSu-O1i-IFf_uJXdkM-IF5zdM9D4_HEFamhoY1onX2XiDz6LPqA1ULEn6kaBu6n6pU1f_XdSbimu2K2D27-b_TBtirexHb-eQBNQ"
+        },
+        {
+          "alt": "Casual portrait photo of Lucas wearing summer vacation clothes under sunlight.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDrUWyzilHHWfgTRDwGFl2r48aQjJqnUk5k0cA8qXVKU-2c7idfc8ztFQ5He159jidOfIPVX3Qmt18i4DV5lxc1DWHITEwHTNtuugWrUbdmSX-VBXst_mJ_Mtc4AhzbTRhuG6vvWxXGXo-PwRbmiYtlzmPg3yIXSy00Jyo2-NH30rorP9eY1Y3ViXSXWEI7oPp9_Jsa82XyvY-Oo0JQE9m8wIouprKp_YjxSYncgmXP4jnGCXRovk8hGQ"
+        }
+      ]
+    },
+    {
+      "id": "almoco-david",
+      "diaNumero": 2,
+      "horario": "13:30",
+      "titulo": "Almoço no Bar do David (Favela Chapéu Mangueira)",
+      "descricao": "Feijoada de frutos do mar premiada e petiscos autênticos com vista panorâmica do Leme e Copacabana.",
+      "icone": "restaurant",
+      "preco": "~R$ 60 est. / pessoa",
+      "precoEhEstimativa": true,
+      "status": "aprovado",
+      "statusLabel": "Votação aprovada",
+      "statusIcon": "thumb_up",
+      "bordaCor": "primary-container",
+      "ehDestaque": false,
+      "nota": null,
+      "sugeridoPor": "Felipe",
+      "votos": {
+        "total": 3,
+        "labelExtra": "+3 votos",
+        "avatares": [
+          {
+            "alt": "Portrait photo of Felipe with beach sunglasses, smiling in Rio de Janeiro sunlight.",
+            "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCTb8mb2306T93YuYrqSGcDVPMx7HfJCl_0-2ooO_3WxasV_ay4luu7m3L7ikazm11TuJSByKnZ7AWza1aPXoHPIg7tNlasY8CmNiJMZVbqnBmvkzs-BNjZuERI-JGG5GQVzFAvp-ZrSriIkSrLZSv08_Bq_pPdNKahE3lhypsnozV4aCeIitVkYdfhp_7_HzUtHQpV5Zp4l7jI2-IBaadeUtkELJUQpgpgB7v7nCeuyKrv9erYY89fPQ"
+          },
+          {
+            "alt": "Sunlit close-up avatar of Mariana smiling gently outdoors in warm coastal atmosphere.",
+            "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuC5HBrUvAakIy-0E1uqeklY4y61gKP2i5w8MUlDM7m2OdTQ5ggXUPYxEqkeZPwP86IYQfrrNXN2Rzgjg8NQl1rvKcyDuenD6OY31WISwJzPzdmtABGM5vKYl1TaTvPBLJWs4r0wI41c1x59UuwMNT0WxUdA3AkF8qPnvH29gGOyh44rUvuuauTabwrifPtTzWF9Szow_nKLWoyQ762sCKBA-p9obK6EX72VQgdWib2kq36EqXS-q8vTMQ"
+          },
+          {
+            "alt": "Casual portrait photo of Lucas wearing summer vacation clothes under sunlight.",
+            "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDikImRWsWlKdRUDcPvgCsknFQrgOW_c8R--7WmCrxP-aHZgwhZKmhc_INpdzVv6JZYYwhBOxlU-uLX43bh0rMLwhsVyTPMnKRy02wmxMHtWblsYIgv0sJ1o9XoO3-kkhMBRtCBwgah6QAQtgRvojjj8z8WVOILt4ac7x-_T4HLggns9QOT8QjADR0QlW8IpCj62qXehi8CZSaPSdkutPQaYFrOoF998_7kXuJ8WTaBMfI868mOuYo41Q"
+          }
+        ]
+      },
+      "horarioFlexivel": false,
+      "presentesLabel": null,
+      "presentesSuffix": null,
+      "presentes": []
+    },
+    {
+      "id": "por-do-sol",
+      "diaNumero": 2,
+      "horario": "17:00",
+      "titulo": "Pôr do Sol na Pedra do Arpoador",
+      "descricao": "Tradição carioca de aplaudir o sol se pondo atrás dos morros Dois Irmãos. Levar esteira e bebidas geladas.",
+      "icone": "wb_twilight",
+      "preco": "Gratuito • Atividade livre",
+      "precoEhEstimativa": false,
+      "status": "destaque",
+      "statusLabel": "Destaque do Dia",
+      "statusIcon": "favorite",
+      "bordaCor": "secondary-container",
+      "ehDestaque": true,
+      "nota": {
+        "icone": "group",
+        "iconeCor": "emerald-700",
+        "texto": "Todos os 5 membros confirmaram presença"
+      },
+      "sugeridoPor": null,
+      "votos": null,
+      "horarioFlexivel": false,
+      "presentesLabel": null,
+      "presentesSuffix": null,
+      "presentes": [
+        {
+          "alt": "Warm avatar photo of Mariana smiling under coastal sunlight in Rio.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCjC5W2KWEuZZIzcsq37UTrSa6LU2HrbmcFAt-HNp7wzASANbyzcjlpu6xGwUCjAxhwupA_gYpl5oFxWYRInHK33tXcUFdtIR2JDo65HaCtcbr4l_kB7p06w-HMYtRuOxKrljAbhr4VpcGyp42W5S76IESP7tYImdRjHeXhym23D_Hxv1AKWpSBnMfKrWCGD6aIJnmZK3Hs4LU6bKEzhPKPwd2T1-wOveA2PogWm56ViGWVESSyp8V62A"
+        },
+        {
+          "alt": "Portrait photo of Felipe with beach sunglasses enjoying the trip.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCSmQb9UMQ35pOgPw368Afg8BSJ8hpcIFVSN8Z2ltLoPdjVRorzbkTrk9FMZRMUsuFMd-YqbojolCZZ8zEusEbW7vw9071m-UD7666MStMv3QT4BQoosSZ5RKCRdkW0l0DBgOhgIr9cSX0uPbuMvg88UPrH0zIm6BwMlZAJWSpTsFC0qIIlZ8wWMdyI-ownKe8i7nwtgszxIRaZW3ylBUuWw9tMZsY68a_qVCtlYMo-7CrUqhH_egvAlg"
+        },
+        {
+          "alt": "Portrait of Beatriz smiling gracefully during beach holiday.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvZr1jkFdxZhhTQ-75O1dbedPUs1V1NO3mNG1EclKZG5DN0VxTzvt6tjI27pV8SEb3iTWkLLdh_HoQqZl-MXsaOMrLUmIpp_1xy0bIN1-ZPy-1B52Kg4wcivKal9UbFD72kPycj4a-IEr7UofaLRHZU4_b6g1ou_8e0u0IPdSnZI-5N3WLVVRNEI8tHug4jeOxLi1cknnQsup5sDV_YCi24KLGblMigd6bHLflURrs8UMBKogcoXnFWQ"
+        },
+        {
+          "alt": "Casual portrait photo of Lucas wearing linen travel attire.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDn-TXznrTHnrLcjgNRhwllSu_Mqkw5urI-dKE28xMA5SjvK4VXKO9cZMlyp8HO-uRxa05d8gW3kKfRdOQqrafuZUzUCWZZMqW0iBgoMHfaxCgrghXE_CY3OCHzDciIVy_WwqflWGTdTc5Apd30B9glPJ-kiptOCRVQ65m4QCy2uX8QSowEnyPzPmfN5aEtQK3HTK50JGxdJMbQFTFO08xe9MV8C1OIMLtNUGD_vf76tOENImyXEZo3Lw"
+        },
+        {
+          "alt": "Portrait of Rodrigo, fifth group traveler, smiling outdoors in Brazil.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbtwJuCAW0jtCsG99ajU7vkJJub8LYIVN_tVubkPI3JJl07GYcwy4JNC8xNJ8zqg7JXhLMRDVdx1aLpbmfiywmmvng4dp2X3lap-hAEDZyB0GmRphmfhsQy5VUKL6ObSfZ9jg8yjMf0sTb7sdDCtxdGJC6AUKcGQfb7C045flEeOAR7u3T4PCXKdfD0imc6F4GOcf-X3V7SMxHxl-mXuel3e1Lbdr-lpeXT1ZcrQTdMbfVtk4AMjjTsw"
+        }
+      ]
+    },
+    {
+      "id": "noite-lapa",
+      "diaNumero": 2,
+      "horario": "20:30",
+      "titulo": "Noite na Lapa e Samba no Carioca da Gema",
+      "descricao": "Roda tradicional de samba de raiz, caipirinhas artesanais e caminhada rápida pelos Arcos da Lapa iluminados.",
+      "icone": "nightlife",
+      "preco": "Entrada R$ 30 (opcional)",
+      "precoEhEstimativa": false,
+      "status": "flexivel",
+      "statusLabel": "Horário flexível",
+      "statusIcon": null,
+      "bordaCor": "outline-variant",
+      "ehDestaque": false,
+      "nota": {
+        "icone": "info",
+        "iconeCor": "tertiary",
+        "texto": "Felipe e Lucas confirmaram. Beatriz e Rodrigo descansam mais cedo."
+      },
+      "sugeridoPor": null,
+      "votos": null,
+      "horarioFlexivel": true,
+      "presentesLabel": null,
+      "presentesSuffix": "(3 confirmados)",
+      "presentes": [
+        {
+          "alt": "Portrait photo of Felipe with beach sunglasses, relaxing on vacation.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDhKsQAsKqNJiLY4mGEnJOzrqcFXPZtqlsNPB_VgHkEszvyCUy6aDtmnJFj5qZMvJd8omGOR2ecCa_kQPkLIZsHAEOaaxStyFHjNTT2pvtkemIFzIRzplxBk5ITWkDZgBiK5lc1qbkDnUjwPrEONGb1vuAah265s_D_RdvuVhr8O_M2PFb5eB4lPuZIQLsliX5RHs_zpW-KE-xFp7HihHbHafxlXWwnemqdzS0kvFD3X2IaOu0vwvaKsw"
+        },
+        {
+          "alt": "Casual portrait photo of Lucas wearing summer vacation clothes.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBvvnKM-_s2be3IXDZqUj1PKNuIHXMjfqx3i5LTTA5OXKme5DQZ7gHtlmAy6MSTibDx0VQpwR2UZmhzLM4-UGmYZ6w3wayuGSaf2GEypgxuzgkqf0gH-yEk2hxlEacPQ_PLuyQMnjpxkESTroS4NoL6gO6E5RMu7Bh7woFkcD9Eafi0XNr6JTEMKcLDnVhuoathwJ0TUJ7X7JrabjjJWrnujxB0XER8u6xtqSzGOveHg2iqcpJJ4tRgtg"
+        },
+        {
+          "alt": "Sunlit avatar of Marina smiling softly outdoors.",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB1vUryDbzJMt6GQPrrUyjnQEjfir1_l1BIl7XGAbgptJnGj5m03VgjNVGmHnznDTr5UvLSs4w1a9GxX1Czdd--wJJR3YqtR-hc824iIarqYrKdVpG-S52vVa9LlX64aVu9MYcmhPg520A6nVzMKaHuRmtFTLiiKBfTou4hdjfsscsPoVaflvTYZDuV7dOmRbWB_tQzCIs5pIJa3nndgrchCM22MEyNnve3NpFc0g7VfTz2dgvoY4RdHA"
+        }
+      ]
+    }
+  ],
+  "conexoes": [
+    {
+      "de": "escuna",
+      "para": "almoco-david",
+      "icone": "directions_car",
+      "texto": "35 min de carro (Barra da Tijuca → Leme)"
+    },
+    {
+      "de": "almoco-david",
+      "para": "por-do-sol",
+      "icone": "directions_walk",
+      "texto": "15 min de caminhada / Uber curto (Leme → Arpoador)"
+    },
+    {
+      "de": "por-do-sol",
+      "para": "noite-lapa",
+      "icone": "directions_car",
+      "texto": "22 min de carro (Ipanema → Lapa)"
+    }
+  ]
+}

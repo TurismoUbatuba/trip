@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WanderGroup - Hub da Viagem: Rio de Janeiro Vibes</title>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom theme config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#111c2d",
+            "secondary-container": "#fd6a49",
+            "on-secondary": "#ffffff",
+            "secondary": "#ae3115",
+            "primary-fixed-dim": "#76d4e7",
+            "on-background": "#111c2d",
+            "tertiary-fixed-dim": "#98cded",
+            "surface-bright": "#f9f9ff",
+            "primary-container": "#008092",
+            "on-primary-container": "#f8fdff",
+            "outline-variant": "#bdc8cb",
+            "on-tertiary-container": "#00050b",
+            "on-secondary-fixed": "#3d0600",
+            "on-surface-variant": "#3e494b",
+            "surface-dim": "#cfdaf2",
+            "primary-fixed": "#a3eeff",
+            "on-tertiary-fixed-variant": "#084c67",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#dee8ff",
+            "surface": "#f9f9ff",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#477d9a",
+            "tertiary-fixed": "#c3e8ff",
+            "surface-container-low": "#f0f3ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdad2",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#8c1900",
+            "surface-container-highest": "#d8e3fb",
+            "on-secondary-container": "#640f00",
+            "inverse-on-surface": "#ecf1ff",
+            "outline": "#6e797c",
+            "on-primary-fixed-variant": "#004e5a",
+            "surface-tint": "#006877",
+            "surface-variant": "#d8e3fb",
+            "on-tertiary-fixed": "#001e2c",
+            "inverse-primary": "#76d4e7",
+            "on-error": "#ffffff",
+            "background": "#f9f9ff",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "secondary-fixed-dim": "#ffb4a3",
+            "primary": "#006574",
+            "on-primary-fixed": "#001f25",
+            "tertiary": "#2c6480"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Ambient level 1 shadow defined in Style Guidance */
+    .shadow-level-1 {
+      box-shadow: 0 4px 16px -2px rgba(10, 77, 104, 0.06), 0 2px 6px -1px rgba(10, 77, 104, 0.04);
+    }
+    /* Warm diffusion level 2 shadow */
+    .shadow-level-2 {
+      box-shadow: 0 12px 28px -4px rgba(8, 131, 149, 0.12), 0 6px 12px -2px rgba(10, 77, 104, 0.06);
+    }
+    /* Custom edge-to-edge scroll bar hide */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased pb-28 selection:bg-secondary-fixed">
+<!-- TOP APP BAR (Shared Component JSON Blueprint) -->
+<header class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-margin py-space-sm bg-surface/85 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<a aria-label="Voltar para Viagens" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors duration-150 active:scale-95" href="index.html">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</a>
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full overflow-hidden ring-2 ring-primary-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of diverse enthusiastic young friends laughing together in sunlit Rio de Janeiro, with warm golden-hour lighting illuminating their cheerful expressions, tropical tones, and clear blue oceanic skies in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMKkDwvzodKf3PKiuj8mCWiX5DOaR0hdglQpoVRLbuRgJU8QoaR6FIOPclHjfcwCOrK1cQaxN_83Wr2-71KAhY15IKJH1LKt-QR8Q_3jjoMuj1lgiM9I_dju9U89l8DS2rQHcnfasCmeB5wwqRuLCiDqzJIaVIzT523uiMsMOz07Uj_ByDe8XS5icQyODNqW1dvrbBOGVr4ehrQdyPTfUqnvvzJOVxGwgVRj0TRwtR6nAG2QxTA5wqow"/>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold text-primary">WanderGroup</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Compartilhar Viagem" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors duration-150 active:scale-95">
+<span class="material-symbols-outlined text-[22px]">share</span>
+</button>
+<button aria-label="Adicionar pessoas ao grupo" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors duration-150 active:scale-95">
+<span class="material-symbols-outlined text-[24px]">group_add</span>
+</button>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="w-full max-w-2xl mx-auto pt-16">
+<!-- HERO SECTION / IMMERSIVE COVER -->
+<section class="relative px-margin pt-space-md">
+<div class="relative w-full h-64 md:h-72 rounded-2xl overflow-hidden shadow-level-1 group">
+<!-- Rio Cover Image -->
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Breathtaking panorama of Rio de Janeiro featuring the majestic Sugarloaf Mountain and vibrant turquoise ocean waters of Botafogo bay beneath golden sunrise light. The atmosphere is warm, sunlit, and adventurous with subtle misty clouds hovering above emerald green coastal hills." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfe27ns-n9xphY6raEXLa0hZUCrmZMqGWKqoVy16i6IlbH51ldRocQAXfoYytKr3nxbj6eAmXp4lm9KShOMapiX0HkiEmnzvKURpmAneq9lZlnJpolk5uEo2mpp2PHjUXKehDgrZ3fHjMEFFdNnXcQvp0f5VA0Ob3f3v5C_SRQZHtYylzPmzqXZegu5TahT_K2WBNDx2y4EG1b7CqnGgpiskv-rL7_HHTg3_SF-sa9o_6VtrM2muXIDw"/>
+<!-- Subtle Vignette & Frosted Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/30 to-transparent"></div>
+<!-- Floating Countdown Badge -->
+<div class="absolute top-space-md left-space-md bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2 shadow-level-1">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-ping"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container absolute left-3"></span>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider pl-2.5">Faltam 12 dias!</span>
+</div>
+<!-- Hero Actions Overlay -->
+<div class="absolute top-space-md right-space-md flex gap-2">
+<button aria-label="Configurações da Viagem" class="w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:bg-surface-container-lowest transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</button>
+</div>
+<!-- Hero Bottom Info -->
+<div class="absolute bottom-space-md left-space-md right-space-md text-surface-bright">
+<div class="flex items-center gap-2 text-surface-container-low mb-1">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">calendar_month</span>
+<span class="text-label-md font-label-md tracking-wide">14 a 20 de Novembro • 7 dias de viagem</span>
+</div>
+<h1 class="text-display-lg-mobile font-display-lg-mobile tracking-tight drop-shadow-sm">
+            Rio de Janeiro Vibes
+          </h1>
+</div>
+</div>
+</section>
+<!-- COLLABORATORS & LIVE CO-PRESENCE PANEL -->
+<section class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-level-1 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="text-label-md font-label-md text-on-surface-variant">Membros Colaboradores</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold bg-primary-fixed/40 px-2 py-0.5 rounded-full">5 Online planejando</span>
+</div>
+<!-- Members Carousel with Edge-to-Edge feel -->
+<div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-1">
+<!-- Lucas (Creator) -->
+<div class="flex flex-col items-center shrink-0 group cursor-pointer">
+<div class="relative">
+<div class="w-13 h-13 rounded-full p-0.5 ring-2 ring-secondary-container">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Portrait photograph of Lucas smiling warmly against an outdoor tropical backdrop, wearing a casual light linen shirt, clear warm sunny ambiance and friendly modern travel style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS7z2FXnxoikNPPLCe6JK8GbmTvlH70h2te7LAqQ1slZDLdHz7nM4vOUlZp-DTLvds-7u_erbLbYUOQgjX_Nj3sPVjt3-hGISfwrbOIwa2jTrUw_MHpN_hEt44dqFAE1vtc3JNICy3XzfFVb-_XNLvSg56BpS7E-zypA4fWZtXtUDxu6lpM1SlziwxYNyZFFEzs2bzXvfLN5wQdaSpvjylyL9o5BZLjBzBhPiD0hf9Su0q6iXBlhsGcg"/>
+</div>
+<span class="absolute -bottom-1 -right-1 bg-secondary-container text-on-secondary text-[9px] font-extrabold px-1 rounded-full uppercase tracking-tighter ring-2 ring-surface-container-lowest">Host</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface mt-1.5 font-bold">Lucas</span>
+</div>
+<!-- Marina -->
+<div class="flex flex-col items-center shrink-0 cursor-pointer">
+<div class="relative">
+<div class="w-12 h-12 rounded-full ring-2 ring-primary-container p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="Portrait photograph of Marina in sunlight with wind-tousled hair and ocean views, genuine laughing expression, warm cinematic lighting, natural travel aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-_qzTAaznRs2BYGdTQTunslEJt2lyuIUWv0d6PAKvWUj5KROl5DOkbmO47ybw3qL_sTJGG3ah92kw6RrhQaRKUV2gpudHCaubwC9HSg1W9zs-MktPi3fEdUQnEpvhK1GMudtsYxK52Fl5Crjv76aSldqE4oDcV3ObZpOZ2-rilbksEfZTjXYg-nmcaTamu9fde35g3KgSDzehoAFH1WceM9mliqQmoU3CYkycQmdbvBVoqnp3sDAc_Q"/>
+</div>
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container absolute bottom-0 right-0 ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface mt-1.5">Marina</span>
+</div>
+<!-- Felipe -->
+<div class="flex flex-col items-center shrink-0 cursor-pointer">
+<div class="relative">
+<div class="w-12 h-12 rounded-full ring-2 ring-surface-dim p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="Headshot of Felipe outdoors at sunset wearing trendy casual sunglasses perched on his head, warm natural skin tones and vibrant lively atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsz7gjMaZaeqPBdEDVXMGlNd_tLTVAeL36M0GG84kdFd_Bsb1J4GzQRRnmdnRohhqbSNSOwSeNWDXk4kHH6WNYKBBLclkgdCyW41BQLE4IXnr1HiBHZRPN5zKCJ5MA9Kx9Aj-Al44wr0mtTsTdmkxqKtJ_XMP9onYtxGJXYh3IRAgZV1eGGeM0xIl8tUfxIGdWPeyTRfJ-AdocW1m7kKf680RHBICFUUpMIIaxw7c_yS1fbJYf7PfFZw"/>
+</div>
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container absolute bottom-0 right-0 ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface mt-1.5">Felipe</span>
+</div>
+<!-- Bia -->
+<div class="flex flex-col items-center shrink-0 cursor-pointer">
+<div class="relative">
+<div class="w-12 h-12 rounded-full ring-2 ring-surface-dim p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="Close up lifestyle portrait of Bia in a sunny cafe setting with subtle palm leaf shadows, radiant smile, relaxed coastal aesthetic with soft natural depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYC4INBn0pHy5F2S1H6raLeNFEPf4vWWbq2djADmrqXG4HtYkDyexIzrmy90f0buZkWJz9DM-8E6L_EG2sGSWFsH5bVdWw6cCOpe66y1zKCdZIfSa69iWs8ARmaxZ1hRDq_SNAsSpl257ArxUOQFqwwdTq-ZEEJugxtVwaLrndqBBF7_Z2XtNPNCf47lBXvVMivlB4FJzQYGRCqDVUG_NzzZwt7-2-y0kO8sASvAm3aU65t75MFWi_FQ"/>
+</div>
+<span class="w-3.5 h-3.5 rounded-full bg-primary-container absolute bottom-0 right-0 ring-2 ring-surface-container-lowest"></span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface mt-1.5">Bia</span>
+</div>
+<!-- Thiago -->
+<div class="flex flex-col items-center shrink-0 cursor-pointer">
+<div class="relative">
+<div class="w-12 h-12 rounded-full ring-2 ring-surface-dim p-0.5">
+<img class="w-full h-full rounded-full object-cover" data-alt="Crisp natural portrait photograph of Thiago smiling on a coastal promenade, wearing modern outdoor travel attire with blue sky and sea behind him." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCANGhXY6A52Ut3HpYpJX3NerGpnKOtkIe1sgIIt9TFCscGWQdlm-q9I8I5HMghKAfA_s36t0F7LYZhPMs8-RrOslgvZAw9V151uWoCAG5R8nmukguNdWFZfcPBGsms-qDCINagfjmCiWzEqR_qbRxp9CF0IsBrJgQTShF0kvmBvcVz-NsO-q21fAbdG_L4bBZSPdu83j0fQXZjrFD--fj99EKANdDP79gkeCH2ZSCBSriWNyOam8npyw"/>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface mt-1.5">Thiago</span>
+</div>
+<!-- Add Member Button -->
+<button aria-label="Adicionar Amigo" class="flex flex-col items-center shrink-0 group active:scale-95 transition-transform">
+<div class="w-12 h-12 rounded-full border-2 border-dashed border-outline-variant flex items-center justify-center text-primary group-hover:border-primary group-hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[24px]">add</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary mt-1.5 font-bold">+ Convidar</span>
+</button>
+</div>
+</div>
+</section>
+<!-- BENTO GRID: METRICS & GROUP PROGRESS -->
+<section class="px-margin mt-space-md">
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Metric 1: Roteiro & Passeios Status -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-level-1 flex flex-col justify-between">
+<div>
+<div class="w-9 h-9 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[20px]">view_timeline</span>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant">Roteiro Coletivo</p>
+<h2 class="text-headline-md font-headline-md text-on-surface mt-0.5">8 passeios</h2>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 4 Confirmados
+              </span>
+<span class="text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">how_to_vote</span> 4 Em votação
+              </span>
+</div>
+<!-- Progress mini bar -->
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container w-1/2"></div>
+<div class="h-full bg-secondary-container w-1/2"></div>
+</div>
+</div>
+</div>
+<!-- Metric 2: Estimativa de Custos -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-level-1 flex flex-col justify-between">
+<div>
+<div class="w-9 h-9 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary mb-2">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant">Custo Estimado</p>
+<h2 class="text-headline-md font-headline-md text-on-surface mt-0.5">R$ 680</h2>
+</div>
+<div class="mt-3 pt-2.5 border-t border-surface-container-low flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-on-surface-variant">Média por pessoa</span>
+<span class="text-label-sm font-label-sm text-primary font-bold hover:underline cursor-pointer flex items-center">
+              Detalhes <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- COLLABORATIVE VOTING BANNER / DRAWER (Level 2 Elevation) -->
+<section class="px-margin mt-space-md">
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-level-2 border-l-4 border-secondary-container relative overflow-hidden">
+<!-- Top row of banner -->
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-fill text-[20px]">how_to_vote</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase font-bold tracking-wider">Ação Necessária</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface"><a class="hover:underline" href="votacao.html">3 novos passeios para votar!</a></h3>
+</div>
+</div>
+<span class="bg-secondary-fixed-dim/50 text-on-secondary-fixed text-label-sm font-label-sm px-2 py-0.5 rounded-full font-bold">Hoje</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2">
+          A votação de encerramento do roteiro fecha às 21h. Dê o seu voto para confirmarmos a reserva em grupo.
+        </p>
+<!-- Quick Vote Micro-Cards Carousel -->
+<div class="mt-space-md flex gap-space-sm overflow-x-auto no-scrollbar pb-1">
+<!-- Card 1: Veleiro ao Pôr do Sol -->
+<div class="w-56 shrink-0 bg-surface-container-low rounded-xl p-2.5 flex flex-col justify-between">
+<div class="relative h-24 rounded-lg overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="A modern catamaran sailboat gliding over tranquil turquoise waters in Guanabara Bay Rio de Janeiro during a luminous coral sunset, soft orange reflections and happy group silhouettes on deck." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzU27PrApaOn40OKXC_y45QuyuQgxsdjrUz_PsoyDFmAzNLEcJwZYpHq2KL6c53R4In0eHvnAtWi4BLbA7ZLXdtOIag1-tFfG9feeAUn1J518_zvAB-dV8lllCMJ7_9k3Tn1O-uAPzbdwtDKkJUSiMqg37jKuCdIH_yXVkGRniR4QW_2_pcdKaWavwIfMkF_WdzaQbHj8m7tPWJU-l22hCF8MJJQotmxrA3jdMReQ2oTI7XgNN6yV40g"/>
+<div class="absolute top-1.5 right-1.5 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded text-[10px] font-bold text-on-surface">
+                R$ 140/pes
+              </div>
+</div>
+<h4 class="text-headline-sm font-headline-sm text-[14px] leading-tight text-on-surface truncate">Veleiro na Baía de Guanabara</h4>
+<div class="flex items-center justify-between mt-1 text-label-sm font-label-sm text-on-surface-variant">
+<span>Sugerido por Marina</span>
+<div class="flex items-center gap-0.5 text-secondary">
+<span class="material-symbols-fill text-[14px]">thumb_up</span>
+<span class="font-bold">3/5</span>
+</div>
+</div>
+<!-- Quick Action Vote Buttons -->
+<div class="flex gap-2 mt-2.5 pt-2 border-t border-surface-container">
+<button aria-label="Aprovar Veleiro" class="flex-1 py-1.5 rounded-full bg-secondary-container text-on-secondary font-label-sm flex items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-fill text-[15px]">thumb_up</span> Quero ir
+              </button>
+<button aria-label="Descartar Veleiro" class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:bg-error-container hover:text-on-error-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]">thumb_down</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Trilha Pedra do Telégrafo -->
+<div class="w-56 shrink-0 bg-surface-container-low rounded-xl p-2.5 flex flex-col justify-between">
+<div class="relative h-24 rounded-lg overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Iconic scenic overlook at Pedra do Telegrafo Rio de Janeiro, with blue ocean vistas and panoramic sunny coastal green peaks under vivid sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVjJ0Z4sw88xtc2ap6zLpCDkoGzQWz3jTYZW-IYI49RaNGFJRkzDn-dqr8Mo_idBiVXf7Dypa-OpBOi4ZT5s-1MZxd5_kuGUB780ulo64q6TsJ7POMZsIGOuDzW1XXkxhdEi5XDIVPuXcdd3y6cfboG8XCKZMh1abB3xsskkp-EfvJcfjY5qBFghhrW8vh12ZBtyKYdexDEw7ariifAhcTmTj-AF8WXCfwM2CE2fs9yHWdI36HJburQg"/>
+<div class="absolute top-1.5 right-1.5 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded text-[10px] font-bold text-on-surface">
+                Grátis
+              </div>
+</div>
+<h4 class="text-headline-sm font-headline-sm text-[14px] leading-tight text-on-surface truncate">Trilha Pedra do Telégrafo</h4>
+<div class="flex items-center justify-between mt-1 text-label-sm font-label-sm text-on-surface-variant">
+<span>Sugerido por Felipe</span>
+<div class="flex items-center gap-0.5 text-secondary">
+<span class="material-symbols-fill text-[14px]">thumb_up</span>
+<span class="font-bold">2/5</span>
+</div>
+</div>
+<div class="flex gap-2 mt-2.5 pt-2 border-t border-surface-container">
+<button class="flex-1 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-secondary-container hover:text-on-secondary font-label-sm flex items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[15px]">thumb_up</span> Votar
+              </button>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:bg-error-container hover:text-on-error-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]">thumb_down</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Roda de Samba da Pedra do Sal -->
+<div class="w-56 shrink-0 bg-surface-container-low rounded-xl p-2.5 flex flex-col justify-between">
+<div class="relative h-24 rounded-lg overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Lively cultural night street scene at Pedra do Sal in Rio de Janeiro, people gathered warmly in historic cobblestone alleys enjoying acoustic samba music under fairy lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArq9miOt5h3OxfraSKwLrMRB9BRZ8FuqBBvTlAZfnlXBW4XIElXsyg0ka_6N7fkH9JjNjr_1DL3yuxDimgvwukFoGk2ky3jAsjFp-BueliFzQN3XKjD2xhSD20WHBdhMokL_etC_YSJDHCfxyAma5EJJ7kv-4ICRFZievEEpZfqBswxd_WIEiNncxuTGEbWuElCKfl3Q84MYjLrqMKiZRaXLaQ0Jwi3Ek8Am-BoMvo_-zlgQ0GOsRPiA"/>
+<div class="absolute top-1.5 right-1.5 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded text-[10px] font-bold text-on-surface">
+                R$ 30/couvert
+              </div>
+</div>
+<h4 class="text-headline-sm font-headline-sm text-[14px] leading-tight text-on-surface truncate">Samba na Pedra do Sal</h4>
+<div class="flex items-center justify-between mt-1 text-label-sm font-label-sm text-on-surface-variant">
+<span>Sugerido por Bia</span>
+<div class="flex items-center gap-0.5 text-secondary">
+<span class="material-symbols-fill text-[14px]">thumb_up</span>
+<span class="font-bold">4/5</span>
+</div>
+</div>
+<div class="flex gap-2 mt-2.5 pt-2 border-t border-surface-container">
+<button class="flex-1 py-1.5 rounded-full bg-secondary-container text-on-secondary font-label-sm flex items-center justify-center gap-1 active:scale-95 transition-transform">
+<span class="material-symbols-fill text-[15px]">thumb_up</span> Quero ir
+              </button>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface-variant flex items-center justify-center hover:bg-error-container hover:text-on-error-container transition-colors active:scale-95">
+<span class="material-symbols-outlined text-[16px]">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- QUICK ACCESS ACTIONS & ATALHOS -->
+<section class="px-margin mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Atalhos da Viagem</h3>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Explorar Catálogo -->
+<a class="bg-surface-container-lowest p-space-md rounded-2xl shadow-level-1 flex items-center gap-3 hover:bg-surface-container-low transition-colors active:scale-98" href="votacao.html">
+<div class="w-11 h-11 rounded-xl bg-primary-container/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">explore</span>
+</div>
+<div>
+<span class="text-headline-sm font-headline-sm text-[15px] leading-tight block text-on-surface">Explorar Passeios</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Adicionar atrações</span>
+</div>
+</a>
+<!-- Ver Roteiro do Dia -->
+<a class="bg-surface-container-lowest p-space-md rounded-2xl shadow-level-1 flex items-center gap-3 hover:bg-surface-container-low transition-colors active:scale-98" href="dia-a-dia.html">
+<div class="w-11 h-11 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">calendar_today</span>
+</div>
+<div>
+<span class="text-headline-sm font-headline-sm text-[15px] leading-tight block text-on-surface">Roteiro do Dia</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cronograma diário</span>
+</div>
+</a>
+<!-- Divisão de Custos -->
+<a class="bg-surface-container-lowest p-space-md rounded-2xl shadow-level-1 flex items-center gap-3 hover:bg-surface-container-low transition-colors active:scale-98" href="#divisao">
+<div class="w-11 h-11 rounded-xl bg-surface-container flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<div>
+<span class="text-headline-sm font-headline-sm text-[15px] leading-tight block text-on-surface">Divisão de Gastos</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Quem pagou o quê</span>
+</div>
+</a>
+<!-- Chat do Grupo -->
+<a class="bg-surface-container-lowest p-space-md rounded-2xl shadow-level-1 flex items-center gap-3 hover:bg-surface-container-low transition-colors active:scale-98 relative" href="#chat">
+<div class="w-11 h-11 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+</div>
+<div>
+<span class="text-headline-sm font-headline-sm text-[15px] leading-tight block text-on-surface">Chat do Grupo</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Conversas ao vivo</span>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container absolute top-3 right-3 ring-2 ring-surface-container-lowest"></span>
+</a>
+</div>
+</section>
+<!-- LIVE ACTIVITY FEED -->
+<section class="px-margin mt-space-lg mb-6">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Atividades Recentes do Grupo</h3>
+<span class="text-label-sm font-label-sm text-primary font-bold cursor-pointer hover:underline">Ver todas</span>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-level-1 flex flex-col gap-space-md">
+<!-- Activity Item 1 -->
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-9 h-9 rounded-full object-cover ring-2 ring-surface-container" data-alt="Marina's circular headshot portrait with warm smiling face and sunny coastal light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMEYRqbUHBGBrDtmN3ZBBKfIy-IuWY085V9Iw0NmabLqoKrUCo2K-7YfmIc4EGjhFnSI8AH2NwuNIPuAm4sOrc--A-rDf3q_cid2U4diZpbMDw_HSy1hvzNsbTlvWcDHJAiy1VWAIMH9rUSx_9Nmyh9ZOPJchfAY0jBsnV-sOiir4Z6hpzZkdP3g4gPZNb6X4XxCQpImRzOPdNhSQgwKlL9yeSUSOyOlDpMCXwJkzpXkTPNs4Xh6KP3w"/>
+<span class="w-4 h-4 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center absolute -bottom-1 -right-1">
+<span class="material-symbols-outlined text-[10px]">add</span>
+</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md text-on-surface">
+<strong class="font-bold text-on-surface">Marina</strong> adicionou <span class="font-semibold text-primary">Passeio de Barco ao Pôr do Sol</span> ao roteiro de Quarta.
+            </p>
+<span class="text-label-sm font-label-sm text-outline">Há 15 minutos</span>
+</div>
+<button aria-label="Ver detalhes" class="text-primary hover:bg-surface-container p-1 rounded-full">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<div class="h-px bg-surface-container-low w-full"></div>
+<!-- Activity Item 2 -->
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-9 h-9 rounded-full object-cover ring-2 ring-surface-container" data-alt="Felipe's circular travel portrait smiling with sunglasses on a Rio de Janeiro viewpoint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRAY36spxqP6XPrOlJjUwfSI_wnDG18-G8ZktUW2rMMhlXptog3D0yZnOwzQfurUrZFDdRMTp8_P09oDBFJ8GuorzhunjX54vRs6HP3SIFzeKbQCJT8Xu3KG8t7SZzdoXkKf4MCws3ojsgmzmbL4TdXLKElkZH9Ey_yBY25lGOVxSR-TpltXP2uLX8pZSLOEmQ6kcwssEs6h0NKVtJUdqSAB11blprezIQJ66P65VODm5lTdPRMWK-Jg"/>
+<span class="w-4 h-4 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center absolute -bottom-1 -right-1">
+<span class="material-symbols-fill text-[10px]">thumb_up</span>
+</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md text-on-surface">
+<strong class="font-bold text-on-surface">Felipe</strong> votou positivamente em <span class="font-semibold text-primary">Trilha Pedra da Gávea</span>.
+            </p>
+<span class="text-label-sm font-label-sm text-outline">Há 42 minutos</span>
+</div>
+<button aria-label="Ver detalhes" class="text-primary hover:bg-surface-container p-1 rounded-full">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+<div class="h-px bg-surface-container-low w-full"></div>
+<!-- Activity Item 3 -->
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img class="w-9 h-9 rounded-full object-cover ring-2 ring-surface-container" data-alt="Lucas circular profile picture in sunglasses, smiling warmly in Brazilian sun." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrlXoaGNlNOajXa_q9ib8GAtWuE1Rbmia3fohsfO1LNhnhvElj32NMGl5PLmHNOFg45fRRRCrDcw52tYmk80cCbj-F9TU4lGPnBT6P82IklBhhu3hI6QOemw_7dfwVLExOwtTW94ULYLUbTEnONXPiTzWr7qK6uPO5ZK4eEsRMBL6CJvKZorR6cIY-Oi6jlqNVCOBvBrnKxUcSI48y2num6r46QQjQ2TcRFqy696min4Y1yOSlmzyc4Q"/>
+<span class="w-4 h-4 rounded-full bg-primary text-on-primary flex items-center justify-center absolute -bottom-1 -right-1">
+<span class="material-symbols-outlined text-[10px]">lock_clock</span>
+</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md text-on-surface">
+<strong class="font-bold text-on-surface">Lucas</strong> confirmou o agendamento de <span class="font-semibold text-primary">Visita ao Cristo Redentor</span>.
+            </p>
+<span class="text-label-sm font-label-sm text-outline">Hoje às 11:20</span>
+</div>
+<button aria-label="Ver detalhes" class="text-primary hover:bg-surface-container p-1 rounded-full">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BOTTOM NAVIGATION BAR (Shared Component JSON Blueprint) -->
+<!-- Contextual Active: 'Viagens' represents the current Trip Hub screen -->
+<nav aria-label="Navegação Principal" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin py-space-xs pb-safe bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_-2px_rgba(10,77,104,0.06)]">
+<!-- Item 1: Viagens (ACTIVE for this trip dashboard) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-space-md py-space-xs active:scale-95 transition-transform duration-150" href="index.html">
+<span class="material-symbols-fill text-[22px]">flight_takeoff</span>
+<span class="text-label-sm font-label-sm">Viagens</span>
+</a>
+<!-- Item 2: Passeios -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="votacao.html">
+<span class="material-symbols-outlined text-[22px]">explore</span>
+<span class="text-label-sm font-label-sm">Passeios</span>
+</a>
+<!-- Item 3: Roteiro -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="dia-a-dia.html">
+<span class="material-symbols-outlined text-[22px]">view_timeline</span>
+<span class="text-label-sm font-label-sm">Roteiro</span>
+</a>
+<!-- Item 4: Perfil -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="#perfil">
+<span class="material-symbols-outlined text-[22px]">account_circle</span>
+<span class="text-label-sm font-label-sm">Perfil</span>
+</a>
+</nav>
+</body></html>

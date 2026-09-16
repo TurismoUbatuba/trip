@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catálogo &amp; Votação de Passeios - WanderGroup</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#111c2d",
+            "secondary-container": "#fd6a49",
+            "on-secondary": "#ffffff",
+            "secondary": "#ae3115",
+            "primary-fixed-dim": "#76d4e7",
+            "on-background": "#111c2d",
+            "tertiary-fixed-dim": "#98cded",
+            "surface-bright": "#f9f9ff",
+            "primary-container": "#008092",
+            "on-primary-container": "#f8fdff",
+            "outline-variant": "#bdc8cb",
+            "on-tertiary-container": "#00050b",
+            "on-secondary-fixed": "#3d0600",
+            "on-surface-variant": "#3e494b",
+            "surface-dim": "#cfdaf2",
+            "primary-fixed": "#a3eeff",
+            "on-tertiary-fixed-variant": "#084c67",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#dee8ff",
+            "surface": "#f9f9ff",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#477d9a",
+            "tertiary-fixed": "#c3e8ff",
+            "surface-container-low": "#f0f3ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdad2",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#8c1900",
+            "surface-container-highest": "#d8e3fb",
+            "on-secondary-container": "#640f00",
+            "inverse-on-surface": "#ecf1ff",
+            "outline": "#6e797c",
+            "on-primary-fixed-variant": "#004e5a",
+            "surface-tint": "#006877",
+            "surface-variant": "#d8e3fb",
+            "on-tertiary-fixed": "#001e2c",
+            "inverse-primary": "#76d4e7",
+            "on-error": "#ffffff",
+            "background": "#f9f9ff",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "secondary-fixed-dim": "#ffb4a3",
+            "primary": "#006574",
+            "on-primary-fixed": "#001f25",
+            "tertiary": "#2c6480"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .card-shadow {
+      box-shadow: 0 4px 16px -2px rgba(10, 77, 104, 0.06), 0 2px 6px -1px rgba(10, 77, 104, 0.04);
+    }
+    .floating-shadow {
+      box-shadow: 0 12px 28px -4px rgba(8, 131, 149, 0.12), 0 6px 12px -2px rgba(10, 77, 104, 0.06);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen pb-36">
+<!-- TOP APP BAR (Shared Component Anchor) -->
+<header class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-margin py-space-sm bg-surface/85 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-2">
+<!-- Leading Avatar: Avatar do grupo de viagem atual -->
+<div class="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary-container/20">
+<img class="w-full h-full object-cover" data-alt="A warm, sunlit circular portrait photo of a close-knit group of multicultural young friends laughing together on a Brazilian beach trip with clear turquoise water and golden morning sunlight in modern travel documentary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOl_lOv2YluwrYG1pRONzLcrC8Z5iY69jnlRvfLI6omOy22Ge0S9BkJAZolGvckb40Pbkob0J4sq3kpoGt3-7dAtWL2A4CuAiZc4q-Tei_R93mnunCxms1ECHD-VgY2RXyqPdFwFj2vPPd4nY13eT4CxPdhPjCcSF5Tis6Q6Yq59MNZSHWjMIJAVwT_oGoSlYhH97ThSfkDpbzgZPZmJcKDjA0kHeytcGFrAYVSE0tC5VmYojg5n03uw"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-secondary-container border-2 border-surface-container-lowest rounded-full"></span>
+</div>
+<div>
+<h1 class="text-headline-md font-headline-md font-bold text-primary tracking-tight">WanderGroup</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+          Rio de Janeiro • 4 viajantes
+        </p>
+</div>
+</div>
+<!-- Trailing Action: group_add -->
+<button aria-label="Convidar amigo" class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors duration-150 active:scale-95">
+<span class="material-symbols-outlined text-primary text-xl">group_add</span>
+</button>
+</header>
+<!-- MAIN VIEWPORT CONTAINER -->
+<main class="pt-20 max-w-xl mx-auto px-margin">
+<!-- PAGE TITLE & SUBTITLE -->
+<section class="mt-3 mb-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="explore">explore</span>
+<h2 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">Passeios no Rio de Janeiro</h2>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-label-sm font-label-sm">
+          8 selecionados
+        </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+        Votem juntos nas melhores experiências da cidade maravilhosa.
+      </p>
+</section>
+<!-- SEARCH & SORT CONTROLS -->
+<section class="space-y-3 mb-4">
+<!-- Search Input (52px height) -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline" data-icon="search">search</span>
+<input class="w-full h-[52px] pl-11 pr-11 bg-surface-container-low text-on-surface rounded-full border border-transparent focus:border-secondary-container focus:bg-surface-container-lowest focus:ring-0 text-body-md font-body-md transition-all shadow-inner" placeholder="Buscar praias, trilhas, museus..." type="text"/>
+<button class="absolute right-3 w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="mic">mic</span>
+</button>
+</div>
+<!-- Sorting Selector -->
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="swap_vert">swap_vert</span> Ordenar por:
+        </span>
+<div class="inline-flex p-1 bg-surface-container-low rounded-full gap-1">
+<button class="px-3 py-1 text-label-sm font-label-sm rounded-full bg-primary text-on-primary shadow-xs">
+            Mais votados
+          </button>
+<button class="px-3 py-1 text-label-sm font-label-sm rounded-full text-on-surface-variant hover:text-primary transition-colors">
+            Menor preço
+          </button>
+<button class="px-3 py-1 text-label-sm font-label-sm rounded-full text-on-surface-variant hover:text-primary transition-colors">
+            Recomendados
+          </button>
+</div>
+</div>
+</section>
+<!-- CATEGORY FILTER CHIPS CAROUSEL (Edge-to-edge overflow) -->
+<section class="-mx-margin px-margin overflow-x-auto hide-scrollbar flex items-center gap-2 pb-2 mb-4">
+<button class="h-[34px] px-4 rounded-full bg-primary text-on-primary text-label-sm font-label-sm whitespace-nowrap shadow-sm flex items-center gap-1.5 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="local_activity">local_activity</span>
+        Todos
+      </button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-primary text-label-sm font-label-sm whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="hiking">hiking</span>
+        Natureza &amp; Trilhas
+        <span class="w-4 h-4 rounded-full bg-secondary-container/20 text-secondary text-[10px] flex items-center justify-center font-bold">3</span>
+</button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-primary text-label-sm font-label-sm whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="restaurant">restaurant</span>
+        Gastronomia
+      </button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-primary text-label-sm font-label-sm whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="sailing">sailing</span>
+        Passeios Náuticos
+        <span class="w-4 h-4 rounded-full bg-primary-fixed text-primary text-[10px] flex items-center justify-center font-bold">1</span>
+</button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-primary text-label-sm font-label-sm whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="museum">museum</span>
+        Cultura
+      </button>
+<button class="h-[34px] px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-primary text-label-sm font-label-sm whitespace-nowrap flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="nightlife">nightlife</span>
+        Vida Noturna
+      </button>
+</section>
+<!-- CARDS CONTAINER (Interactive List/Bento Grid Pattern) -->
+<div class="space-y-5">
+<!-- CARD 1: Passeio de Escuna Ilhas Tijucas (Aprovado / Adicionado ao Dia 2) -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden card-shadow border border-outline-variant/30 transition-all hover:translate-y-[-2px]">
+<!-- High-aspect Photo & Badges -->
+<div class="relative w-full aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Stunning cinematic photograph of a classic wooden schooner boat anchoring near the rugged emerald Tijucas Islands off the coast of Rio de Janeiro. Crystal clear turquoise water glistens under bright midday tropical sunlight, with dramatic green granite peaks under an expansive light blue sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKSaJ_MR-d1ke2J0WG8HjPRCotAvtld9WUlkBKTOOMaRGyZm3Jdc7IThDVT3DncWvGoO-9CH1sa7fTmmf-yCuOZW_yl4Q7ioCWcXasRkwnEykKBWmRp0dKvSrPVyKfzdYJiAzg9lxra4FIUf-tKnluP1c4jEAvpLGgNNHlescwjDmFFVXpHruYMImfimwGetuiTn_jjwnxw0iZmpFqCQq88cuOzwVwpySufV3pWzME7Fx8R1Z6plFiQQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent"></div>
+<!-- Top pill overlay badges -->
+<div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface/85 backdrop-blur-md text-primary text-label-sm font-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="sailing">sailing</span>
+              Náutico
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-emerald-600/90 text-white text-label-sm font-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs" data-icon="check_circle">check_circle</span>
+              Aprovado pelo grupo!
+            </span>
+</div>
+<!-- Favorite Quick Button -->
+<button aria-label="Favoritar" class="absolute top-3 right-3 w-10 h-10 rounded-full bg-surface/85 backdrop-blur-md flex items-center justify-center text-secondary-container shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<!-- Bottom Image Meta -->
+<div class="absolute bottom-3 left-3 right-3 text-white flex items-end justify-between">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary-fixed font-bold">Barra da Tijuca</span>
+<h3 class="text-headline-md font-headline-md text-white font-bold leading-snug">Passeio de Escuna Ilhas Tijucas</h3>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-surface-container-high block">A partir de</span>
+<span class="text-headline-sm font-headline-sm font-extrabold text-white">R$ 160</span>
+<span class="text-label-sm font-label-sm text-surface-container-high">/ pessoa</span>
+</div>
+</div>
+</div>
+<!-- Card Content Body -->
+<div class="p-4 space-y-3.5">
+<!-- Quick Specs (Duration & Rating) -->
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant border-b border-outline-variant/30 pb-3">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-primary text-base" data-icon="schedule">schedule</span>
+                4 horas
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-amber-500 text-base" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.9 <span class="text-on-surface-variant font-normal">(128 avaliações)</span>
+</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold bg-primary-fixed/40 px-2 py-0.5 rounded">Paradas p/ Mergulho</span>
+</div>
+<!-- Collaborative Group Voting Drawer Box -->
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<!-- Overlapping Avatar Stack (-8px overlap) -->
+<div class="flex items-center -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest overflow-hidden" title="Marina">
+<img class="w-full h-full object-cover" data-alt="Close up bright portrait of Marina with dark curls and a cheerful open smile during sunny daylight outdoors in Rio, soft natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA70ZNxRlRBj3y5Mv3M0QF4vK3jMKOqvFLlbkkZJwBYpuNpEROo9bNvK27gLwehrQ2XsE-FNIQFAR1fr7rPyOUusHx3IDkCGN2xWccYrqAiNOgy_p9l1pmkdb-voCTJVREKORvL27yHU5nS2NOsr-NqHG8GAOF3IClmuib5yNJFl2EV8YV5rfF1U0oHjPIpNRMtLLFWUdX7mHHrSv1ZIaS-2NnyqBGhwR8gJQqLzwe0m69X6WyN3U1Eqg"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest overflow-hidden" title="Felipe">
+<img class="w-full h-full object-cover" data-alt="Candid headshot of Felipe smiling in a white linen shirt under tropical daytime outdoor sunlight with lush palm trees in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqGTxtaegXpbvyFv7HL0LCal4b2J5dgNxS3iXgYdgyC_tdQcoEVbMBax1HYqyN-bpFCFMPfcePWazj71szHUVd0BHEKODwAUonhpSpfAjScs5-dGlU2OgAoFUnj80MxKzSdimOwExoS7BWJM-rw34i2Sqskopk3TMhfMIkuBSvVO_F5AexmML1SCket499s2NjYVNcbtouGsE3y5vz6m8pPyHYK6urhAlYyoX8Wc6aCZmItv9L-0sF8A"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest overflow-hidden" title="Bia">
+<img class="w-full h-full object-cover" data-alt="Sunny portrait of Bia with sunglasses pushed up on her head, bright golden hour beach ambiance in warm coastal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1rYkbTrFp3vRPoBycPR0XFc8QJh8EsVgjWv6VjnTqssBg75eMn5KMQDK4ZDN1U9k1vu0kgEp0wracIF9c4dVDYXfntQKonMMPHyBaRkXNROHH42CVfPLc1T4K7SY40UGFKTB5afkfCiniZZTZVIK7E-1pjC911fnPodPAsjOKf0AKvDlRp1YzkL0HtC-z34FzeFgzEzNzoBKp9sw0T3qBeH2uEPehjuQDmKN7wEAI686ulg8qfgD_0Q"/>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest overflow-hidden" title="Lucas">
+<img class="w-full h-full object-cover" data-alt="Vibrant portrait of Lucas wearing a light green tank top smiling broadly with the Atlantic ocean behind him in Rio de Janeiro." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbinPxTseSajbLmbB7NfWDvb8VaL0rEL_h-LSQp8gBaBMpvbtkrUugj5v_wGyNRHkGGiSWHNpiTH5--HtWYyd4q72nyVmtTuw4RauAZQmELyIXXeyWo_JTNO6YEIeq_WZZgsJX7DyFe-sU00NIq_OvLv-CLzKmiIV2W7kVFTrd7JjqqMjN--QqFq8QYjByBtyl0c4pg0fKYQJm5qdk3JMdEno4HQ0SqbnbDpsv1F_82WhbD45lEIo1sg"/>
+</div>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface font-bold">Unanimidade (4 de 4 votos)</p>
+<p class="text-body-sm font-body-sm text-emerald-700 font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="thumb_up" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+                  Marina, Felipe, Bia e Lucas
+                </p>
+</div>
+</div>
+<!-- Action Button: Added with green check -->
+<button class="w-full sm:w-auto h-11 px-4 rounded-full bg-emerald-700 text-white font-label-md font-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" onclick="window.location.href='dia-a-dia.html'">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+              Adicionado ao Dia 2
+            </button>
+</div>
+</div>
+</article>
+<!-- CARD 2: Trilha Pedra do Telégrafo & Fotos (Em Votação: 3 a favor, 1 pendente) -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden card-shadow border border-outline-variant/30 transition-all hover:translate-y-[-2px]">
+<div class="relative w-full aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Breathtaking panoramic view from the summit of Pedra do Telegrafo in Barra de Guaratiba Rio de Janeiro. A hiker stands on the famous optical illusion ledge looking out over curved pristine beaches, turquoise ocean, and lush coastal rainforest bathed in radiant sunny morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxUPqq7D7HsTvziP5acvfETRhsdXCtO9CoB_4D0wwK2bMWyWtIkp2PIa7HsOaEc6jyO161dBP9mGm1BHWl4wgi357ypsxTm3ccBQeBEHr7uvzqZGds3S_Fb0JZr5knvn2UYdFxwQ53jHc94EtmZWR2Vi0L_O_SJghXBDuu7rdYpZ7DVpLodFQyPa060bgEi8Sqs7ShvhPdmw_So0tmAbX_3wrMMV0xX6FbaKeVCLGx37E5F1T0ShtAHA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent"></div>
+<!-- Top Status Pill -->
+<div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface/85 backdrop-blur-md text-primary text-label-sm font-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="hiking">hiking</span>
+              Trilha &amp; Mirante
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary text-label-sm font-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs" data-icon="how_to_vote">how_to_vote</span>
+              Votação Ativa
+            </span>
+</div>
+<!-- Favorite Quick Button -->
+<button aria-label="Favoritar" class="absolute top-3 right-3 w-10 h-10 rounded-full bg-surface/85 backdrop-blur-md flex items-center justify-center text-outline hover:text-secondary-container shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="favorite_border">favorite_border</span>
+</button>
+<!-- Bottom Image Meta -->
+<div class="absolute bottom-3 left-3 right-3 text-white flex items-end justify-between">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary-fixed font-bold">Barra de Guaratiba</span>
+<h3 class="text-headline-md font-headline-md text-white font-bold leading-snug">Trilha Pedra do Telégrafo &amp; Fotos</h3>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-surface-container-high block">Preço</span>
+<span class="text-headline-sm font-headline-sm font-extrabold text-white">Grátis</span>
+<span class="text-label-sm font-label-sm text-surface-container-high block">c/ guia R$ 50</span>
+</div>
+</div>
+</div>
+<div class="p-4 space-y-3.5">
+<!-- Specs -->
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant border-b border-outline-variant/30 pb-3">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-primary text-base" data-icon="schedule">schedule</span>
+                3 horas
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-amber-500 text-base" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.8 <span class="text-on-surface-variant font-normal">(94 avaliações)</span>
+</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary font-bold bg-secondary-fixed/50 px-2 py-0.5 rounded">Nível Moderado</span>
+</div>
+<!-- Group Voting Element (3 votes favorable, 1 pending) -->
+<div class="bg-surface-container-low rounded-xl p-3.5 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<!-- Avatar cluster with pending badge -->
+<div class="flex items-center -space-x-2">
+<div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of smiling Marina outdoors on a clear day with natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFKWOFv2GxgqdsyIO9rHrETWEUdxoJY6qp0plqAYdRod429bQeOuo7vV5vq0C4n3KYK2buG_2KV8Z5KLULu1SPDuVxaCTEMCafyCDCBxw-2lhK7Y_ba_xRXDP5JiYyfdFeVrfvWy1sib-otOih5kEmulWV5zo5kY8e9e60584Z3IabWylvtvLMfPG9zdyTekE9V4tntmRQLBXJReymnzKEKjRUStox75kSrPCUDQA7LFslGVIfhpgX0w"/>
+</div>
+<div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Felipe with warm cheerful expression in summer sunshine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGlJLAdQHoUXRIEU53caAqAyVGGA-3gerx0LrPoUVDsqKVj_7kX_UGA3hDUklU1xt39uo5D0TJUgXHlLiUbU79P5kZOQdoOD7dRFjl8HFrg7nhF6zhXqae-R3YGjVc5dZUY0n-qdc9X8srnd0tS31cCAK41h_a3mhFttXEtFiUMe0Gy4ZN9DNVbx9unooCHZNUJsKSl1Cejlv4cZi4nFf73jKlwc6-YvI1Q9T0liXraLD581UgUjL8lA"/>
+</div>
+<div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of Bia smiling warmly with tropical backdrop and light sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgIfTH0dXqq99EXq0Yc6qMWUSRDwGPu5G88eWGnh9IccRSWofKD727AWlJZBKokCw4OAbMksVYa6rEVAGB8MrkSN881m1g_X7PJZg52fYOVnRaTVZV_pjWJvD9gEJLoXnonHEWaH8R9NYq329vCorFFIT4PdoEZVNKebdl7umiBcE3JSGq_4fYC2KE0IxJAs93flzcehWJRSuNy2pto3otq3t7OWE8m1AJuRLf4chztaHbBYf0gNmn8A"/>
+</div>
+<div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest bg-surface-container-highest flex items-center justify-center text-outline text-[11px] font-bold" title="Lucas (Pendente)">
+                    ?
+                  </div>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface font-bold">3 votos a favor, 1 pendente</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Falta apenas o voto do Lucas</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/15 text-secondary text-label-sm font-label-sm font-bold">
+                75% aprovação
+              </span>
+</div>
+<!-- Action buttons: Gostei & Adicionar ao Roteiro -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="h-11 rounded-full bg-surface-container-lowest border border-secondary-container/40 text-secondary font-label-md font-label-md flex items-center justify-center gap-1.5 hover:bg-secondary-container/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-lg text-secondary-container" data-icon="thumb_up" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+                Gostei (3)
+              </button>
+<button class="h-11 rounded-full bg-primary text-on-primary font-label-md font-label-md flex items-center justify-center gap-1.5 hover:bg-primary-container active:scale-95 transition-all shadow-sm" onclick="window.location.href='dia-a-dia.html'">
+<span class="material-symbols-outlined text-lg" data-icon="add_circle">add_circle</span>
+                Adicionar ao Roteiro
+              </button>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 3: Pôr do Sol no Arpoador com Caipirinha (Sugerido por Bia) -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden card-shadow border border-outline-variant/30 transition-all hover:translate-y-[-2px]">
+<div class="relative w-full aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Mesmerizing golden hour sunset over Arpoador rock in Rio de Janeiro, with silhouettes of two brothers hill Morro Dois Irmaos against warm vibrant orange, coral, and violet clouds reflecting in the ocean surf." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Z6K8Y5UA-B5rg2dXqpB7U17bU9a69KINMpxC6-GqcEgF6BXcU60f5G4GGineWL1EkBfAGRRl-cBUaEvjVoMatYJosNPa6u7p8KqBetwnAf4HFnsgM0cZP7zmWKby0a1LV_oH-iQd3XqB90O2zpOOc69mPQv-jTtmT-20DFEc4aid9tVgAPyUwfPG1Wrd2BRIx_qn1o_f-cBe89LZo-hzxGzJ_Pivmb_G4F5PNiSNc-LK1G3MO2gwog"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent"></div>
+<!-- Suggester pill badge -->
+<div class="absolute top-3 left-3 flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md shadow-sm">
+<div class="w-5 h-5 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Tiny avatar portrait of Bia smiling outdoors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRm1oz5l_clOt0_ubDJP8IbD9mnfoRsTBZ4odO-srHP6srLgWuzpliU6SfdclCJwxxOBrhTwZGkBMCEt0AHEUD4zK8rV_LsjDUbmk-3jMvNL2QzUx5ojke9DqYrmiFWuGr1gJb2Dq7eme2uohbZCNShn4l1S5NsbMzsslU-GfcQW9bnTFqYLazCzH5teWfAqp2HBbSfVhY05FQNwSNm-p7IH3rqJ2jE_f6IJZquwB82N9CHW5lQrSZvA"/>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface font-semibold">Bia sugeriu há 2h</span>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-white flex items-end justify-between">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary-fixed font-bold">Ipanema / Arpoador</span>
+<h3 class="text-headline-md font-headline-md text-white font-bold leading-snug">Pôr do Sol no Arpoador com Caipirinha</h3>
+</div>
+<div class="text-right">
+<span class="text-label-sm font-label-sm text-surface-container-high block">Custo estimado</span>
+<span class="text-headline-sm font-headline-sm font-extrabold text-white">R$ 35</span>
+</div>
+</div>
+</div>
+<div class="p-4 space-y-3">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-primary text-base" data-icon="wb_twilight">wb_twilight</span>
+              Melhor horário: 17:15
+            </span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-sm" data-icon="local_bar" style="font-variation-settings: 'FILL' 1;">local_bar</span>
+              Quiosque &amp; Tradição
+            </span>
+</div>
+<!-- Compact Voting and Suggestion Interaction -->
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/30">
+<div class="flex items-center gap-2">
+<div class="flex items-center -space-x-1.5">
+<div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Avatar of Bia who suggested the tour." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVdswYBkRIChcQXGblCAoiUWjzZMoJxdnWczqVWrutaZUSfimtCj1DEmmOt4d0HmnvNtix4u4C1Mwcu9nh3fqMSPH7Sn02_gUbsFTUpLxCf91rQQig3wWTrVsOpdndBpXGkEdCu-tjH58nDPjyMmM4AWrl2aNQvFxem413rb0dJhCJVe7GebEpJy2LPRRErl5Fz1sQA12aFOv79CHjriu51CIxiW8XnU2scPpZQq8YRTPqFIhHjh01Pw"/>
+</div>
+<div class="w-7 h-7 rounded-full border-2 border-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Avatar of Lucas who supported the idea." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuCX6NqBV_Mo2faqTHnHZM5qJaQ6e1L6jaXsIdTR9g6NygAFPVi-3bRu-_GeoQ0u0fHAdKiL40uwlDz3ZbgeM_9EykJ-sD7cqVrKrA6Ng_O8FVIRE94pN03-Xfj6J7iSLGBNZdw1-Fo7vd92RCB6xqFKR9kX-VnwhE-tnH-6s1HFykbLM9LIdY1ZqADqGwDRPfRI4C-8EnlbOc_xKrTAjae5u93tN79G0DXPRASFZzVeFg7692d4xlYA"/>
+</div>
+</div>
+<span class="text-label-md font-label-md text-on-surface font-bold">2 votos</span>
+</div>
+<!-- Primary Coral CTA Button "+ Votar" -->
+<button class="h-10 px-5 rounded-full bg-secondary-container text-on-secondary font-label-md font-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-all hover:opacity-95">
+<span class="material-symbols-outlined text-lg" data-icon="add">add</span>
+              + Votar
+            </button>
+</div>
+</div>
+</article>
+<!-- CARD 4: Entrada Cristo Redentor no Trem do Corcovado (Confirmado na Agenda) -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden card-shadow border border-outline-variant/30 transition-all hover:translate-y-[-2px]">
+<div class="relative w-full aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Majestic open angle photograph of Christ the Redeemer statue atop Corcovado mountain in Rio de Janeiro, with the bright red vintage Corcovado funicular cog train climbing through dense rainforest canopy under bright clear daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA23BGgUDxTTrrO8gLRXsX0dvZH5ut2JE0ISAcR_KolzQcjJfh7ne45QQZfFEE--sny75piadHvM8MqMfpOCdubQGyFthDAj2pTjKk8BCdYz9zecM-AQSNi9VAFpdXJuThc7buo_-KUItaiV3WIZOLFNzyZIt8xqZkUCsMyPK87Rs3bl8PZ1wQN3crjpWKPt0f1xdv8e2T2uVLUN9HocVqCiA3B76dto-bwDG2xEkgGN1sapa5dVdt9Yg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent"></div>
+<!-- Fixed Status Badge: Confirmado na Agenda -->
+<div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-primary text-on-primary text-label-sm font-label-sm font-bold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-xs" data-icon="event_available">event_available</span>
+              Confirmado na Agenda do Dia 1
+            </span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-white flex items-end justify-between">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary-fixed font-bold">Cosme Velho</span>
+<h3 class="text-headline-md font-headline-md text-white font-bold leading-snug">Entrada Cristo Redentor no Trem do Corcovado</h3>
+</div>
+<div class="text-right">
+<span class="text-headline-sm font-headline-sm font-extrabold text-white">R$ 115</span>
+<span class="text-label-sm font-label-sm text-surface-container-high block">/ pessoa</span>
+</div>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-primary-fixed/50 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg" data-icon="confirmation_number">confirmation_number</span>
+</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface font-bold">Ingressos Emitidos</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Sexta-feira, às 09:30</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-primary hover:bg-surface-container font-label-sm font-label-sm flex items-center gap-1 transition-colors">
+            Ver Voucher
+            <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- FLOATING QUICK ACTION BAR (Level 2 Elevation) -->
+<aside class="fixed bottom-20 left-0 w-full z-40 px-margin pointer-events-none">
+<div class="max-w-xl mx-auto flex items-center justify-between gap-3 pointer-events-auto">
+<!-- Suggest another tour button -->
+<button class="flex-1 h-12 px-4 rounded-full bg-surface-container-lowest/95 backdrop-blur-md text-primary font-label-md font-label-md border border-primary/20 flex items-center justify-center gap-2 floating-shadow hover:bg-surface-container-low active:scale-95 transition-all">
+<span class="material-symbols-outlined text-xl text-secondary-container" data-icon="add_location_alt">add_location_alt</span>
+        + Sugerir Outro Passeio
+      </button>
+<!-- View current itinerary button -->
+<button class="flex-1 h-12 px-4 rounded-full bg-secondary-container text-on-secondary font-label-md font-label-md flex items-center justify-center gap-2 floating-shadow hover:bg-secondary active:scale-95 transition-all" onclick="window.location.href='dia-a-dia.html'">
+<span class="material-symbols-outlined text-xl" data-icon="auto_stories">auto_stories</span>
+        Ver Roteiro (8)
+      </button>
+</div>
+</aside>
+<!-- BOTTOM NAV BAR (Shared Component Anchor) -->
+<!-- Contextual Active: 'Passeios' tab is active! -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin py-space-xs pb-safe bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_-2px_rgba(10,77,104,0.06)]">
+<!-- Item 1: Viagens (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="index.html">
+<span class="material-symbols-outlined text-2xl" data-icon="flight_takeoff">flight_takeoff</span>
+<span class="text-label-sm font-label-sm mt-0.5">Viagens</span>
+</a>
+<!-- Item 2: Passeios (ACTIVE STATE as mandated by design intent) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary rounded-full px-space-md py-space-xs shadow-sm active:scale-95 transition-transform duration-150" href="votacao.html">
+<span class="material-symbols-outlined text-2xl" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-label-sm font-label-sm mt-0.5 font-bold">Passeios</span>
+</a>
+<!-- Item 3: Roteiro (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="dia-a-dia.html">
+<span class="material-symbols-outlined text-2xl" data-icon="view_timeline">view_timeline</span>
+<span class="text-label-sm font-label-sm mt-0.5">Roteiro</span>
+</a>
+<!-- Item 4: Perfil (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="#perfil">
+<span class="material-symbols-outlined text-2xl" data-icon="account_circle">account_circle</span>
+<span class="text-label-sm font-label-sm mt-0.5">Perfil</span>
+</a>
+</nav>
+<!-- Interactive feedback micro-interactions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle interaction for vote buttons
+      const voteButtons = document.querySelectorAll('button:has([data-icon="thumb_up"]), button:has([data-icon="add"])');
+      voteButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          btn.classList.add('scale-105');
+          setTimeout(() => btn.classList.remove('scale-105'), 180);
+        });
+      });
+    });
+  </script>
+</body></html>
