@@ -1,0 +1,197 @@
+{
+  "pagina": {
+    "titulo": "Passeios no Rio de Janeiro",
+    "subtitulo": "Votem juntos nas melhores experiências da cidade maravilhosa.",
+    "totalSelecionados": 8
+  },
+  "grupo": {
+    "nome": "WanderGroup",
+    "destino": "Rio de Janeiro",
+    "totalViajantes": 4,
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCOl_lOv2YluwrYG1pRONzLcrC8Z5iY69jnlRvfLI6omOy22Ge0S9BkJAZolGvckb40Pbkob0J4sq3kpoGt3-7dAtWL2A4CuAiZc4q-Tei_R93mnunCxms1ECHD-VgY2RXyqPdFwFj2vPPd4nY13eT4CxPdhPjCcSF5Tis6Q6Yq59MNZSHWjMIJAVwT_oGoSlYhH97ThSfkDpbzgZPZmJcKDjA0kHeytcGFrAYVSE0tC5VmYojg5n03uw",
+    "avatarAlt": "A warm, sunlit circular portrait photo of a close-knit group of multicultural young friends laughing together on a Brazilian beach trip with clear turquoise water and golden morning sunlight in modern travel documentary style."
+  },
+  "viajantes": [
+    {
+      "id": "marina",
+      "nome": "Marina",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuA70ZNxRlRBj3y5Mv3M0QF4vK3jMKOqvFLlbkkZJwBYpuNpEROo9bNvK27gLwehrQ2XsE-FNIQFAR1fr7rPyOUusHx3IDkCGN2xWccYrqAiNOgy_p9l1pmkdb-voCTJVREKORvL27yHU5nS2NOsr-NqHG8GAOF3IClmuib5yNJFl2EV8YV5rfF1U0oHjPIpNRMtLLFWUdX7mHHrSv1ZIaS-2NnyqBGhwR8gJQqLzwe0m69X6WyN3U1Eqg",
+      "avatarAlt": "Close up bright portrait of Marina with dark curls and a cheerful open smile during sunny daylight outdoors in Rio, soft natural lighting."
+    },
+    {
+      "id": "felipe",
+      "nome": "Felipe",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCqGTxtaegXpbvyFv7HL0LCal4b2J5dgNxS3iXgYdgyC_tdQcoEVbMBax1HYqyN-bpFCFMPfcePWazj71szHUVd0BHEKODwAUonhpSpfAjScs5-dGlU2OgAoFUnj80MxKzSdimOwExoS7BWJM-rw34i2Sqskopk3TMhfMIkuBSvVO_F5AexmML1SCket499s2NjYVNcbtouGsE3y5vz6m8pPyHYK6urhAlYyoX8Wc6aCZmItv9L-0sF8A",
+      "avatarAlt": "Candid headshot of Felipe smiling in a white linen shirt under tropical daytime outdoor sunlight with lush palm trees in background."
+    },
+    {
+      "id": "bia",
+      "nome": "Bia",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuB1rYkbTrFp3vRPoBycPR0XFc8QJh8EsVgjWv6VjnTqssBg75eMn5KMQDK4ZDN1U9k1vu0kgEp0wracIF9c4dVDYXfntQKonMMPHyBaRkXNROHH42CVfPLc1T4K7SY40UGFKTB5afkfCiniZZTZVIK7E-1pjC911fnPodPAsjOKf0AKvDlRp1YzkL0HtC-z34FzeFgzEzNzoBKp9sw0T3qBeH2uEPehjuQDmKN7wEAI686ulg8qfgD_0Q",
+      "avatarAlt": "Sunny portrait of Bia with sunglasses pushed up on her head, bright golden hour beach ambiance in warm coastal tones."
+    },
+    {
+      "id": "lucas",
+      "nome": "Lucas",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbinPxTseSajbLmbB7NfWDvb8VaL0rEL_h-LSQp8gBaBMpvbtkrUugj5v_wGyNRHkGGiSWHNpiTH5--HtWYyd4q72nyVmtTuw4RauAZQmELyIXXeyWo_JTNO6YEIeq_WZZgsJX7DyFe-sU00NIq_OvLv-CLzKmiIV2W7kVFTrd7JjqqMjN--QqFq8QYjByBtyl0c4pg0fKYQJm5qdk3JMdEno4HQ0SqbnbDpsv1F_82WhbD45lEIo1sg",
+      "avatarAlt": "Vibrant portrait of Lucas wearing a light green tank top smiling broadly with the Atlantic ocean behind him in Rio de Janeiro."
+    }
+  ],
+  "categorias": [
+    { "id": "todos", "nome": "Todos", "icone": "local_activity", "count": null },
+    { "id": "natureza", "nome": "Natureza & Trilhas", "icone": "hiking", "count": 3 },
+    { "id": "gastronomia", "nome": "Gastronomia", "icone": "restaurant", "count": null },
+    { "id": "nauticos", "nome": "Passeios Náuticos", "icone": "sailing", "count": 1 },
+    { "id": "cultura", "nome": "Cultura", "icone": "museum", "count": null },
+    { "id": "vida-noturna", "nome": "Vida Noturna", "icone": "nightlife", "count": null }
+  ],
+  "passeios": [
+    {
+      "id": "escuna-tijucas",
+      "titulo": "Passeio de Escuna Ilhas Tijucas",
+      "localizacao": "Barra da Tijuca",
+      "categoria": "nauticos",
+      "categoriaLabel": "Náutico",
+      "categoriaIcone": "sailing",
+      "statusBadge": {
+        "tipo": "aprovado",
+        "label": "Aprovado pelo grupo!",
+        "icone": "check_circle"
+      },
+      "imagem": "https://lh3.googleusercontent.com/aida-public/AB6AXuAKSaJ_MR-d1ke2J0WG8HjPRCotAvtld9WUlkBKTOOMaRGyZm3Jdc7IThDVT3DncWvGoO-9CH1sa7fTmmf-yCuOZW_yl4Q7ioCWcXasRkwnEykKBWmRp0dKvSrPVyKfzdYJiAzg9lxra4FIUf-tKnluP1c4jEAvpLGgNNHlescwjDmFFVXpHruYMImfimwGetuiTn_jjwnxw0iZmpFqCQq88cuOzwVwpySufV3pWzME7Fx8R1Z6plFiQQ",
+      "imagemAlt": "Stunning cinematic photograph of a classic wooden schooner boat anchoring near the rugged emerald Tijucas Islands off the coast of Rio de Janeiro. Crystal clear turquoise water glistens under bright midday tropical sunlight, with dramatic green granite peaks under an expansive light blue sky.",
+      "duracao": "4 horas",
+      "avaliacao": { "nota": "4.9", "total": 128 },
+      "precoLabel": "A partir de",
+      "preco": "R$ 160",
+      "precoPorPessoa": true,
+      "tags": ["Paradas p/ Mergulho"],
+      "favoritado": true,
+      "votacao": {
+        "status": "unanimidade",
+        "label": "Unanimidade (4 de 4 votos)",
+        "sublabel": "Marina, Felipe, Bia e Lucas",
+        "sublabelIcone": "thumb_up",
+        "porcentagem": 100,
+        "avatares": ["marina", "felipe", "bia", "lucas"]
+      },
+      "acaoPrincipal": {
+        "tipo": "adicionado",
+        "label": "Adicionado ao Dia 2",
+        "icone": "check_circle",
+        "cor": "emerald-700",
+        "link": "dia-a-dia.html"
+      },
+      "linkVoucher": null
+    },
+    {
+      "id": "trilha-telegrafo",
+      "titulo": "Trilha Pedra do Telégrafo & Fotos",
+      "localizacao": "Barra de Guaratiba",
+      "categoria": "natureza",
+      "categoriaLabel": "Trilha & Mirante",
+      "categoriaIcone": "hiking",
+      "statusBadge": {
+        "tipo": "votacao-ativa",
+        "label": "Votação Ativa",
+        "icone": "how_to_vote"
+      },
+      "imagem": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxUPqq7D7HsTvziP5acvfETRhsdXCtO9CoB_4D0wwK2bMWyWtIkp2PIa7HsOaEc6jyO161dBP9mGm1BHWl4wgi357ypsxTm3ccBQeBEHr7uvzqZGds3S_Fb0JZr5knvn2UYdFxwQ53jHc94EtmZWR2Vi0L_O_SJghXBDuu7rdYpZ7DVpLodFQyPa060bgEi8Sqs7ShvhPdmw_So0tmAbX_3wrMMV0xX6FbaKeVCLGx37E5F1T0ShtAHA",
+      "imagemAlt": "Breathtaking panoramic view from the summit of Pedra do Telegrafo in Barra de Guaratiba Rio de Janeiro. A hiker stands on the famous optical illusion ledge looking out over curved pristine beaches, turquoise ocean, and lush coastal rainforest bathed in radiant sunny morning light.",
+      "duracao": "3 horas",
+      "avaliacao": { "nota": "4.8", "total": 94 },
+      "precoLabel": "Preço",
+      "preco": "Grátis",
+      "precoPorPessoa": false,
+      "precoExtra": "c/ guia R$ 50",
+      "tags": ["Nível Moderado"],
+      "favoritado": false,
+      "votacao": {
+        "status": "parcial",
+        "label": "3 votos a favor, 1 pendente",
+        "sublabel": "Falta apenas o voto do Lucas",
+        "sublabelIcone": null,
+        "porcentagem": 75,
+        "avatares": ["marina", "felipe", "bia"],
+        "pendente": ["lucas"]
+      },
+      "acaoPrincipal": {
+        "tipo": "votar-adicionar",
+        "labelVotar": "Gostei (3)",
+        "labelAdicionar": "Adicionar ao Roteiro",
+        "iconeVotar": "thumb_up",
+        "iconeAdicionar": "add_circle",
+        "link": "dia-a-dia.html"
+      },
+      "linkVoucher": null
+    },
+    {
+      "id": "por-do-sol-arpoador",
+      "titulo": "Pôr do Sol no Arpoador com Caipirinha",
+      "localizacao": "Ipanema / Arpoador",
+      "categoria": "gastronomia",
+      "categoriaLabel": null,
+      "categoriaIcone": null,
+      "statusBadge": null,
+      "sugeridoPor": {
+        "viajanteId": "bia",
+        "tempo": "há 2h"
+      },
+      "imagem": "https://lh3.googleusercontent.com/aida-public/AB6AXuA1Z6K8Y5UA-B5rg2dXqpB7U17bU9a69KINMpxC6-GqcEgF6BXcU60f5G4GGineWL1EkBfAGRRl-cBUaEvjVoMatYJosNPa6u7p8KqBetwnAf4HFnsgM0cZP7zmWKby0a1LV_oH-iQd3XqB90O2zpOOc69mPQv-jTtmT-20DFEc4aid9tVgAPyUwfPG1Wrd2BRIx_qn1o_f-cBe89LZo-hzxGzJ_Pivmb_G4F5PNiSNc-LK1G3MO2gwog",
+      "imagemAlt": "Mesmerizing golden hour sunset over Arpoador rock in Rio de Janeiro, with silhouettes of two brothers hill Morro Dois Irmaos against warm vibrant orange, coral, and violet clouds reflecting in the ocean surf.",
+      "duracao": null,
+      "duracaoCustom": { "icone": "wb_twilight", "texto": "Melhor horário: 17:15" },
+      "avaliacao": null,
+      "precoLabel": "Custo estimado",
+      "preco": "R$ 35",
+      "precoPorPessoa": false,
+      "tags": [{ "icone": "local_bar", "texto": "Quiosque & Tradição" }],
+      "favoritado": false,
+      "votacao": {
+        "status": "votos",
+        "label": "2 votos",
+        "porcentagem": null,
+        "avatares": ["bia", "lucas"]
+      },
+      "acaoPrincipal": {
+        "tipo": "votar",
+        "label": "+ Votar",
+        "icone": "add",
+        "cor": "secondary-container"
+      },
+      "linkVoucher": null
+    },
+    {
+      "id": "cristo-redentor",
+      "titulo": "Entrada Cristo Redentor no Trem do Corcovado",
+      "localizacao": "Cosme Velho",
+      "categoria": "cultura",
+      "categoriaLabel": null,
+      "categoriaIcone": null,
+      "statusBadge": {
+        "tipo": "confirmado-agenda",
+        "label": "Confirmado na Agenda do Dia 1",
+        "icone": "event_available"
+      },
+      "imagem": "https://lh3.googleusercontent.com/aida-public/AB6AXuA23BGgUDxTTrrO8gLRXsX0dvZH5ut2JE0ISAcR_KolzQcjJfh7ne45QQZfFEE--sny75piadHvM8MqMfpOCdubQGyFthDAj2pTjKk8BCdYz9zecM-AQSNi9VAFpdXJuThc7buo_-KUItaiV3WIZOLFNzyZIt8xqZkUCsMyPK87Rs3bl8PZ1wQN3crjpWKPt0f1xdv8e2T2uVLUN9HocVqCiA3B76dto-bwDG2xEkgGN1sapa5dVdt9Yg",
+      "imagemAlt": "Majestic open angle photograph of Christ the Redeemer statue atop Corcovado mountain in Rio de Janeiro, with the bright red vintage Corcovado funicular cog train climbing through dense rainforest canopy under bright clear daylight.",
+      "duracao": null,
+      "avaliacao": null,
+      "preco": "R$ 115",
+      "precoLabel": null,
+      "precoPorPessoa": true,
+      "tags": null,
+      "favoritado": false,
+      "votacao": null,
+      "acaoPrincipal": null,
+      "voucher": {
+        "label": "Ingressos Emitidos",
+        "sublabel": "Sexta-feira, às 09:30",
+        "icone": "confirmation_number",
+        "botaoLabel": "Ver Voucher",
+        "link": "passeio-voucher.html"
+      },
+      "linkVoucher": "passeio-voucher.html"
+    }
+  ]
+}
