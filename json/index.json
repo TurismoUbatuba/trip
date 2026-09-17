@@ -1,0 +1,67 @@
+{
+  "usuario": {
+    "nome": "Lucas",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuC62hYaAkfizzFAyBAGyAJRwMrTzrTI66IWi9FE8jxEB3XQXPP5TaBVZg0jxXvZ7h7jAYlgcGyUTtcDPLAMuT8FFA-5r25vo-gNul62OFTsZ3qJQlxOCuxOdaoZsSpMdPfeYFBxykVHx7XgKmRU_gczhKLyACWnAegPSi7jcNH8Z1qQhXH76jMaDO_NwlqICSX3ZtEsBclgMDLjq5OwQUQ-kvH8mCuhLco6gPN5WCfUmjO0r29U55ySkA",
+    "avatarAlt": "A bright warm portrait of a smiling young Brazilian male traveler named Lucas in sunny casual outdoor lighting with a softly blurred beach background, captured in high-detail modern editorial mobile travel photography aesthetic."
+  },
+  "viagemAtiva": {
+    "id": "rio-amigos",
+    "titulo": "Rio de Janeiro com os Amigos",
+    "regiao": "Brasil",
+    "categoria": "Férias de Verão",
+    "dataInicioFmt": "14 a 20 Nov",
+    "totalDias": 7,
+    "diasRestantes": 12,
+    "status": "Confirmada",
+    "progressoPorcento": 65,
+    "totalViajantes": 5,
+    "imagem": "https://lh3.googleusercontent.com/aida-public/AB6AXuDPc5ioEKFj-bmDIS0-KID-jv6OWI85RKEbVoKyNTEeayeSM33_lGFgfPE_E07dIPuEvQN2idDON15ogV58c3GoUqgKBBhHJpssLbmik88lJl2gdtNsRK_8ZgQjGZ4G2yypMHpBDBOapMWFDkS6rHpEvtbTtR2xns9v_VsAUYT8A-IF-giupcb8ZhW56FNFxBjk8ix8avVngDRgQBv-RAvkBxDOGAnnRfsPlzYrc8VAIiCRIVqnSR5vPA",
+    "imagemAlt": "A breathtaking golden hour panoramic view of Rio de Janeiro showing Sugarloaf Mountain and vibrant azure coastline under a warm glowing tropical sun, photographed in crisp high-resolution light-mode travel aesthetic."
+  },
+  "viajantes": [
+    {
+      "id": "camila",
+      "nome": "Camila",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDz6ADe5MX64NmjIGqW3UPUyAbFzqXNx8F8izfFGgPx8ys5KpoU6yYuSZ3kTFuAaTxgz1jgAOWZESApssBt2wLVWJzxwJFwBa_eneW9NwCryfqlYvzeptZd8w9b21noyp25qDUfBahaym8Yy_k03bjYzM0AKMGz8A4gOk3FmnEaGaj27CdVrZ252t7jVD60cbEe9pKbw8rEfdjtSJzuFd3vjF2pBpaM8WArjZU9N9a6QI5DKNVBuGW8XA",
+      "avatarAlt": "Close-up portrait of Camila, an enthusiastic Brazilian female traveler with sunglasses on her head enjoying a sunny tropical trip, authentic vibrant travel photo."
+    },
+    {
+      "id": "bruno",
+      "nome": "Bruno",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAehb-Zz0a3qE-uVSYi4jLnWXmevnQWTXbYdboqeHV62vvTNF6RjlbLruIQHu6HxvE0QmiByZ8zY4c1lb2cZ_AiuIi6egw5lh3ur4IeTO2TbScvGnIo9LC4gESIPaEpeiYxPkZarRNIySUd_n6zRIT7hPcL_91cCYMxvoPXw5RDT0A_d7A8EiwpS5OD1NFJyUmuITEU1CWK9KmKFu66TyTE27Wpm0CfABOYgHl-cSsuZmaKTODa-KsaaQ",
+      "avatarAlt": "Portrait of Bruno, an energetic male traveler with light beard smiling broadly against a sunny turquoise beach shore, high-detail mobile social travel style."
+    },
+    {
+      "id": "juliana",
+      "nome": "Juliana",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDlVqsqAH2VLnBGMuqPlshA-NvnCZDPPcEgC0b_nIrE3RTnDTNUhGBU6uxsgCLd_rasMUxn1ngO2rqi92Q_QrzxI284kZxEuIwAQa04k16ZVhTOYDNsvOQD4X6cM4S_rsAFIgGfNQD9DBTVl05Pn4ItIJUZaSiSil0ZAMQaPX-syLBLamRjvo5QyoUVprvC6T-sU034ybrQb6zH0JVffDuAFip-QYNXP3WINSSzJRhg5hQhdvZZyc4CIA",
+      "avatarAlt": "Candid photograph of Juliana laughing joyfully with beach wind in her hair at Copacabana Rio de Janeiro, sunlit warm travel portrait."
+    },
+    {
+      "id": "rafael",
+      "nome": "Rafael",
+      "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAealsfxdItMUPXvi-T5whg2G8z7AVWKSWLSleQ4oL7i94ixE8_mAf_CqlQyHnaSoxsxFsNqvFqJws9rFURCE99ZH7OPz5zdLcFyLHwP5-SU8BvXySHYDA8WC5v7f3okkT_PwzqNEWdIcDVfyb0zcTxpGw6nP9EdvYFYnHU4aEDclmAXJHiP8wezumXenlhYvqmPz4n7y2p5wG1PwKlMHQNXvEJa2-b_b9PhQ09vbEPMGHMsPsaIb4hdQ",
+      "avatarAlt": "Friendly portrait of Rafael, a young travel explorer wearing a linen shirt under Rio de Janeiro palm trees with bright natural daylight."
+    }
+  ],
+  "totalViajantesConfirmados": 5,
+  "extrasCount": 1,
+  "inspiracoes": [
+    {
+      "id": "noronha",
+      "titulo": "Fernando de Noronha",
+      "descricao": "Ideal para mergulho e grupos de até 6",
+      "tag": "Praias",
+      "imagem": "https://lh3.googleusercontent.com/aida-public/AB6AXuBJ69T6ZWP4BjtbxudhgyAzqGkbW4X4uooBZ8XXoyBMPmF6-9P1ziQQ_2PbZm9FHeYG9FfkzmMvSQKQKdspSK1h-oIUg3QBQ0aUYApnAP0CYBEWj3UGbHj5ruo8qdFXIFHCEPxdgRsyK9w9_IzL1SEYggYvSJQqM9twREnGhcLDa1tu4qatT3tkkyJmMU3mHFnobmLqRTDc6M2xlsG-M8JNFzAnXHYr4dBCIIjxdsd5xu6EhsbxBvKJsA",
+      "imagemAlt": "Stunning aerial view of Fernando de Noronha crystalline turquoise waters and volcanic rocks under clear sunny sky, premium travel photography."
+    },
+    {
+      "id": "paraty",
+      "titulo": "Paraty & Ilha Grande",
+      "descricao": "Passeios de escuna, cachoeiras e gastronomia",
+      "tag": "Cultural",
+      "imagem": "https://lh3.googleusercontent.com/aida-public/AB6AXuAHn7an2c09pmacDtanmfeZr5CBjKYMN8DsFL2njKtiJb6q0mS3mFRGJ5bAWzr3KTwRsHrEYuD6g0Y-L8VLe17Zdte-nHflJc_mLx6rUeiuvMZuE9-s5-XZWyvLEi5AFaAD3gMYF0_JyhR8wea1dbw4elPaHBR4kq4baJApznzMi-72gOyaivupXc_afCOCPF-ClIAAOBKsCSdN1M3-fF9E9-OkAK0eo4USA9IBcjWrP9Zo1FGr9nrJBA",
+      "imagemAlt": "Charming colonial cobblestone streets in Paraty Brazil surrounded by lush green Atlantic forest on a sunlit afternoon, vibrant travel photography."
+    }
+  ]
+}
