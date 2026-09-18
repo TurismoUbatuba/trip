@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WanderGroup - Entrar ou Criar Conta</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#111c2d",
+            "secondary-container": "#fd6a49",
+            "on-secondary": "#ffffff",
+            "secondary": "#ae3115",
+            "primary-fixed-dim": "#76d4e7",
+            "on-background": "#111c2d",
+            "tertiary-fixed-dim": "#98cded",
+            "surface-bright": "#f9f9ff",
+            "primary-container": "#008092",
+            "on-primary-container": "#f8fdff",
+            "outline-variant": "#bdc8cb",
+            "on-tertiary-container": "#00050b",
+            "on-secondary-fixed": "#3d0600",
+            "on-surface-variant": "#3e494b",
+            "surface-dim": "#cfdaf2",
+            "primary-fixed": "#a3eeff",
+            "on-tertiary-fixed-variant": "#084c67",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#dee8ff",
+            "surface": "#f9f9ff",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#477d9a",
+            "tertiary-fixed": "#c3e8ff",
+            "surface-container-low": "#f0f3ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdad2",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#8c1900",
+            "surface-container-highest": "#d8e3fb",
+            "on-secondary-container": "#640f00",
+            "inverse-on-surface": "#ecf1ff",
+            "outline": "#6e797c",
+            "on-primary-fixed-variant": "#004e5a",
+            "surface-tint": "#006877",
+            "surface-variant": "#d8e3fb",
+            "on-tertiary-fixed": "#001e2c",
+            "inverse-primary": "#76d4e7",
+            "on-error": "#ffffff",
+            "background": "#f9f9ff",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "secondary-fixed-dim": "#ffb4a3",
+            "primary": "#006574",
+            "on-primary-fixed": "#001f25",
+            "tertiary": "#2c6480"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .shadow-ambient {
+      box-shadow: 0 4px 16px -2px rgba(10, 77, 104, 0.06), 0 2px 6px -1px rgba(10, 77, 104, 0.04);
+    }
+    .shadow-modal {
+      box-shadow: 0 12px 28px -4px rgba(8, 131, 149, 0.12), 0 6px 12px -2px rgba(10, 77, 104, 0.06);
+    }
+    .tab-active {
+      background: #006574;
+      color: #ffffff;
+    }
+    .tab-inactive {
+      background: transparent;
+      color: #3e494b;
+    }
+    .tab-inactive:hover {
+      background: #e7eeff;
+    }
+    .password-toggle {
+      cursor: pointer;
+    }
+    .password-toggle:hover {
+      color: #006574;
+    }
+    .input-error {
+      border-color: #ba1a1a !important;
+    }
+    .error-message {
+      color: #ba1a1a;
+      font-size: 12px;
+      margin-top: 4px;
+      display: none;
+    }
+    .error-message.visible {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Auth Page (No Bottom Nav) -->
+<main class="min-h-screen flex flex-col">
+<!-- Logo & Back -->
+<div class="px-margin pt-6 pb-2 flex items-center justify-between">
+<a class="flex items-center gap-1.5 text-primary" href="como-funciona.html">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span class="text-label-md font-label-md">Como funciona</span>
+</a>
+</div>
+<!-- Hero Brand -->
+<div class="px-margin pt-4 pb-6">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center shadow-ambient">
+<span class="material-symbols-outlined text-[28px] text-on-primary">explore</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider block">WanderGroup</span>
+<h1 class="text-headline-lg font-headline-lg text-on-surface font-bold">Roteiros em Grupo</h1>
+</div>
+</div>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Planeje, vote e explore novos destinos com seus amigos de forma colaborativa.</p>
+</div>
+<!-- Tab Switcher: Entrar / Criar Conta -->
+<div class="px-margin mb-6">
+<div class="bg-surface-container rounded-full p-1 flex" id="auth-tabs">
+<button class="flex-1 py-2.5 rounded-full text-label-md font-label-md transition-all duration-200 tab-active" id="tab-login" onclick="switchTab('login')">
+            Entrar
+          </button>
+<button class="flex-1 py-2.5 rounded-full text-label-md font-label-md transition-all duration-200 tab-inactive" id="tab-register" onclick="switchTab('register')">
+            Criar Conta
+          </button>
+</div>
+</div>
+<!-- Login Form -->
+<div class="px-margin" id="form-login">
+<form class="space-y-space-md" onsubmit="handleLogin(event)">
+<!-- Email -->
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface" for="login-email">E-mail</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">mail</span>
+<input class="w-full h-[52px] pl-11 pr-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-primary focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-outline transition-all duration-150" id="login-email" placeholder="seu@email.com" type="email"/>
+</div>
+<span class="error-message" id="login-email-error">Informe um e-mail válido.</span>
+</div>
+<!-- Password -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-center">
+<label class="block text-label-md font-label-md text-on-surface" for="login-password">Senha</label>
+<button class="text-label-sm font-label-sm text-primary font-bold" type="button">Esqueceu a senha?</button>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">lock</span>
+<input class="w-full h-[52px] pl-11 pr-11 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-primary focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-outline transition-all duration-150" id="login-password" placeholder="Digite sua senha" type="password"/>
+<button class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-outline-variant password-toggle" id="toggle-login-password" onclick="togglePassword('login-password', 'toggle-login-password')" type="button">visibility</button>
+</div>
+<span class="error-message" id="login-password-error">A senha deve ter pelo menos 6 caracteres.</span>
+</div>
+<!-- Login Button -->
+<button class="w-full min-h-[48px] py-3.5 rounded-full bg-secondary-container text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-ambient active:scale-[0.98] transition-transform duration-150" type="submit">
+<span>Entrar</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="flex items-center gap-3 my-6">
+<div class="flex-1 h-px bg-outline-variant/40"></div>
+<span class="text-label-sm font-label-sm text-outline">ou continue com</span>
+<div class="flex-1 h-px bg-outline-variant/40"></div>
+</div>
+<!-- Social Login -->
+<div class="space-y-3">
+<button class="w-full h-[52px] rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center gap-3 text-body-md font-body-md text-on-surface hover:bg-surface-container-low active:scale-[0.98] transition-all duration-150 shadow-sm">
+<svg class="w-5 h-5" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Entrar com Google
+          </button>
+<button class="w-full h-[52px] rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center gap-3 text-body-md font-body-md text-on-surface hover:bg-surface-container-low active:scale-[0.98] transition-all duration-150 shadow-sm">
+<svg class="w-5 h-5" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" fill="#000000"/></svg>
+            Entrar com Apple
+          </button>
+</div>
+</div>
+<!-- Register Form (Hidden by default) -->
+<div class="px-margin hidden" id="form-register">
+<form class="space-y-space-md" onsubmit="handleRegister(event)">
+<!-- Full Name -->
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface" for="register-name">Nome completo</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">person</span>
+<input class="w-full h-[52px] pl-11 pr-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-primary focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-outline transition-all duration-150" id="register-name" placeholder="Seu nome completo" type="text"/>
+</div>
+<span class="error-message" id="register-name-error">Informe seu nome.</span>
+</div>
+<!-- Email -->
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface" for="register-email">E-mail</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">mail</span>
+<input class="w-full h-[52px] pl-11 pr-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-primary focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-outline transition-all duration-150" id="register-email" placeholder="seu@email.com" type="email"/>
+</div>
+<span class="error-message" id="register-email-error">Informe um e-mail válido.</span>
+</div>
+<!-- Password -->
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface" for="register-password">Crie uma senha</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">lock</span>
+<input class="w-full h-[52px] pl-11 pr-11 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-primary focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-outline transition-all duration-150" id="register-password" placeholder="Mínimo 6 caracteres" type="password"/>
+<button class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-outline-variant password-toggle" id="toggle-register-password" onclick="togglePassword('register-password', 'toggle-register-password')" type="button">visibility</button>
+</div>
+<!-- Password Strength -->
+<div class="flex gap-1.5 mt-1">
+<div class="flex-1 h-1 rounded-full bg-outline-variant/30" id="pw-bar-1"></div>
+<div class="flex-1 h-1 rounded-full bg-outline-variant/30" id="pw-bar-2"></div>
+<div class="flex-1 h-1 rounded-full bg-outline-variant/30" id="pw-bar-3"></div>
+</div>
+<span class="text-label-sm font-label-sm text-outline" id="pw-strength-text"></span>
+<span class="error-message" id="register-password-error">A senha deve ter pelo menos 6 caracteres.</span>
+</div>
+<!-- Confirm Password -->
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface" for="register-confirm-password">Confirmar senha</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">lock</span>
+<input class="w-full h-[52px] pl-11 pr-4 rounded-2xl bg-surface-container-low border border-outline-variant/30 focus:border-primary focus:ring-0 text-body-md font-body-md text-on-surface placeholder:text-outline transition-all duration-150" id="register-confirm-password" placeholder="Repita a senha" type="password"/>
+</div>
+<span class="error-message" id="register-confirm-error">As senhas não coincidem.</span>
+</div>
+<!-- Terms -->
+<div class="flex items-start gap-2.5 pt-1">
+<input class="mt-0.5 w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary accent-primary" id="terms" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface-variant" for="terms">
+            Li e aceito os <button class="text-primary font-bold underline" type="button">Termos de Uso</button> e a <button class="text-primary font-bold underline" type="button">Política de Privacidade</button>.
+          </label>
+</div>
+<span class="error-message" id="register-terms-error">Você precisa aceitar os termos para continuar.</span>
+<!-- Register Button -->
+<button class="w-full min-h-[48px] py-3.5 rounded-full bg-secondary-container text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-ambient active:scale-[0.98] transition-transform duration-150" type="submit">
+<span>Criar Minha Conta</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="flex items-center gap-3 my-6">
+<div class="flex-1 h-px bg-outline-variant/40"></div>
+<span class="text-label-sm font-label-sm text-outline">ou cadastre-se com</span>
+<div class="flex-1 h-px bg-outline-variant/40"></div>
+</div>
+<!-- Social Register -->
+<div class="space-y-3">
+<button class="w-full h-[52px] rounded-2xl bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center gap-3 text-body-md font-body-md text-on-surface hover:bg-surface-container-low active:scale-[0.98] transition-all duration-150 shadow-sm">
+<svg class="w-5 h-5" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            Cadastrar com Google
+          </button>
+</div>
+</div>
+<!-- Footer -->
+<div class="px-margin mt-auto pt-8 pb-8 text-center">
+<p class="text-label-sm font-label-sm text-outline">WanderGroup v1.0 • Roteiros colaborativos em grupo</p>
+<p class="text-label-sm font-label-sm text-outline mt-1">Feito por e para viajantes</p>
+</div>
+</main>
+<script>
+    function switchTab(tab) {
+      const loginTab = document.getElementById('tab-login');
+      const registerTab = document.getElementById('tab-register');
+      const formLogin = document.getElementById('form-login');
+      const formRegister = document.getElementById('form-register');
+      
+      if (tab === 'login') {
+        loginTab.className = 'flex-1 py-2.5 rounded-full text-label-md font-label-md transition-all duration-200 tab-active';
+        registerTab.className = 'flex-1 py-2.5 rounded-full text-label-md font-label-md transition-all duration-200 tab-inactive';
+        formLogin.classList.remove('hidden');
+        formRegister.classList.add('hidden');
+      } else {
+        registerTab.className = 'flex-1 py-2.5 rounded-full text-label-md font-label-md transition-all duration-200 tab-active';
+        loginTab.className = 'flex-1 py-2.5 rounded-full text-label-md font-label-md transition-all duration-200 tab-inactive';
+        formRegister.classList.remove('hidden');
+        formLogin.classList.add('hidden');
+      }
+      
+      clearErrors();
+    }
+    
+    function togglePassword(inputId, iconId) {
+      const input = document.getElementById(inputId);
+      const icon = document.getElementById(iconId);
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.textContent = 'visibility_off';
+      } else {
+        input.type = 'password';
+        icon.textContent = 'visibility';
+      }
+    }
+    
+    function clearErrors() {
+      document.querySelectorAll('.error-message').forEach(el => {
+        el.classList.remove('visible');
+      });
+      document.querySelectorAll('input').forEach(el => {
+        el.classList.remove('input-error');
+      });
+    }
+    
+    function showError(inputId, errorId) {
+      document.getElementById(inputId).classList.add('input-error');
+      document.getElementById(errorId).classList.add('visible');
+    }
+    
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+    
+    function handleLogin(e) {
+      e.preventDefault();
+      clearErrors();
+      let valid = true;
+      
+      const email = document.getElementById('login-email').value.trim();
+      const password = document.getElementById('login-password').value;
+      
+      if (!email || !validateEmail(email)) {
+        showError('login-email', 'login-email-error');
+        valid = false;
+      }
+      if (!password || password.length < 6) {
+        showError('login-password', 'login-password-error');
+        valid = false;
+      }
+      
+      if (valid) {
+        window.location.href = 'index.html';
+      }
+    }
+    
+    function handleRegister(e) {
+      e.preventDefault();
+      clearErrors();
+      let valid = true;
+      
+      const name = document.getElementById('register-name').value.trim();
+      const email = document.getElementById('register-email').value.trim();
+      const password = document.getElementById('register-password').value;
+      const confirmPassword = document.getElementById('register-confirm-password').value;
+      const terms = document.getElementById('terms').checked;
+      
+      if (!name) {
+        showError('register-name', 'register-name-error');
+        valid = false;
+      }
+      if (!email || !validateEmail(email)) {
+        showError('register-email', 'register-email-error');
+        valid = false;
+      }
+      if (!password || password.length < 6) {
+        showError('register-password', 'register-password-error');
+        valid = false;
+      }
+      if (password !== confirmPassword) {
+        showError('register-confirm-password', 'register-confirm-error');
+        valid = false;
+      }
+      if (!terms) {
+        document.getElementById('register-terms-error').classList.add('visible');
+        valid = false;
+      }
+      
+      if (valid) {
+        window.location.href = 'index.html';
+      }
+    }
+    
+    // Password strength indicator
+    document.getElementById('register-password')?.addEventListener('input', function() {
+      const pw = this.value;
+      const bar1 = document.getElementById('pw-bar-1');
+      const bar2 = document.getElementById('pw-bar-2');
+      const bar3 = document.getElementById('pw-bar-3');
+      const text = document.getElementById('pw-strength-text');
+      
+      let strength = 0;
+      if (pw.length >= 6) strength++;
+      if (pw.length >= 10 && /[A-Z]/.test(pw)) strength++;
+      if (/[0-9]/.test(pw) && /[^A-Za-z0-9]/.test(pw)) strength++;
+      
+      const colors = ['#ba1a1a', '#ae3115', '#006574', '#006574'];
+      const labels = ['', 'Fraca', 'Média', 'Forte'];
+      
+      bar1.className = 'flex-1 h-1 rounded-full transition-colors duration-300';
+      bar2.className = 'flex-1 h-1 rounded-full transition-colors duration-300';
+      bar3.className = 'flex-1 h-1 rounded-full transition-colors duration-300';
+      
+      if (pw.length === 0) {
+        text.textContent = '';
+        return;
+      }
+      
+      if (strength >= 1) bar1.style.background = colors[strength];
+      if (strength >= 2) bar2.style.background = colors[strength];
+      if (strength >= 3) bar3.style.background = colors[strength];
+      
+      bar1.className += strength >= 1 ? '' : ' bg-outline-variant/30';
+      bar2.className += strength >= 2 ? '' : ' bg-outline-variant/30';
+      bar3.className += strength >= 3 ? '' : ' bg-outline-variant/30';
+      
+      text.textContent = labels[strength];
+      text.className = 'text-label-sm font-label-sm ' + (strength > 0 ? 'text-on-surface-variant' : 'text-outline');
+    });
+  </script>
+</body></html>

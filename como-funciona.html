@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WanderGroup - Como Funciona</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#111c2d",
+            "secondary-container": "#fd6a49",
+            "on-secondary": "#ffffff",
+            "secondary": "#ae3115",
+            "primary-fixed-dim": "#76d4e7",
+            "on-background": "#111c2d",
+            "tertiary-fixed-dim": "#98cded",
+            "surface-bright": "#f9f9ff",
+            "primary-container": "#008092",
+            "on-primary-container": "#f8fdff",
+            "outline-variant": "#bdc8cb",
+            "on-tertiary-container": "#00050b",
+            "on-secondary-fixed": "#3d0600",
+            "on-surface-variant": "#3e494b",
+            "surface-dim": "#cfdaf2",
+            "primary-fixed": "#a3eeff",
+            "on-tertiary-fixed-variant": "#084c67",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-container-high": "#dee8ff",
+            "surface": "#f9f9ff",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#477d9a",
+            "tertiary-fixed": "#c3e8ff",
+            "surface-container-low": "#f0f3ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdad2",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#8c1900",
+            "surface-container-highest": "#d8e3fb",
+            "on-secondary-container": "#640f00",
+            "inverse-on-surface": "#ecf1ff",
+            "outline": "#6e797c",
+            "on-primary-fixed-variant": "#004e5a",
+            "surface-tint": "#006877",
+            "surface-variant": "#d8e3fb",
+            "on-tertiary-fixed": "#001e2c",
+            "inverse-primary": "#76d4e7",
+            "on-error": "#ffffff",
+            "background": "#f9f9ff",
+            "inverse-surface": "#263143",
+            "surface-container": "#e7eeff",
+            "secondary-fixed-dim": "#ffb4a3",
+            "primary": "#006574",
+            "on-primary-fixed": "#001f25",
+            "tertiary": "#2c6480"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .shadow-ambient {
+      box-shadow: 0 4px 16px -2px rgba(10, 77, 104, 0.06), 0 2px 6px -1px rgba(10, 77, 104, 0.04);
+    }
+    .shadow-modal {
+      box-shadow: 0 12px 28px -4px rgba(8, 131, 149, 0.12), 0 6px 12px -2px rgba(10, 77, 104, 0.06);
+    }
+    .step-connector {
+      position: relative;
+    }
+    .step-connector::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 56px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #006574, #00657480);
+    }
+    .step-connector:last-child::before {
+      display: none;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #006574 0%, #008092 50%, #477d9a 100%);
+    }
+    .float-card {
+      animation: float 3s ease-in-out infinite;
+    }
+    .float-card:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    .float-card:nth-child(3) {
+      animation-delay: 1s;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-40 flex justify-between items-center px-margin py-space-sm bg-surface/85 backdrop-blur-md shadow-sm transition-colors duration-150">
+<div class="flex items-center gap-space-sm">
+<a aria-label="Voltar" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors duration-150 active:scale-95" href="index.html">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</a>
+<div>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider block">WanderGroup</span>
+<h1 class="text-headline-md font-headline-md font-bold text-primary leading-tight">Como Funciona</h1>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Entrar" class="h-9 px-4 rounded-full bg-secondary-container text-on-secondary text-label-md font-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform duration-150" onclick="window.location.href='login.html'">
+<span class="material-symbols-outlined text-[18px]">login</span>
+<span>Entrar</span>
+</button>
+</div>
+</header>
+<main class="pt-20 px-margin max-w-md mx-auto space-y-space-xl">
+<!-- HERO SECTION -->
+<section class="text-center space-y-4 pt-4">
+<div class="w-16 h-16 mx-auto rounded-3xl bg-primary flex items-center justify-center shadow-modal">
+<span class="material-symbols-outlined text-[36px] text-on-primary">explore</span>
+</div>
+<h2 class="text-display-lg-mobile font-display-lg-mobile text-on-surface leading-tight">
+          Planeje viagens em grupo sem estresse
+        </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-xs mx-auto">
+          Crie roteiros colaborativos, vote nos melhores passeios e divida gastos com seus amigos — tudo em um só lugar.
+        </p>
+</section>
+<!-- HOW IT WORKS - STEPS -->
+<section class="space-y-space-md">
+<div class="text-center space-y-1">
+<h3 class="text-headline-md font-headline-md text-on-surface">Como tudo funciona</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">3 passos simples para sua próxima aventura em grupo</p>
+</div>
+<div class="space-y-0">
+<!-- Step 1 -->
+<div class="step-connector">
+<div class="flex gap-4 items-start pb-8">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-ambient">
+<span class="material-symbols-outlined text-[24px] text-on-primary">group_add</span>
+</div>
+<div class="flex-1 pt-1">
+<h4 class="text-label-lg font-label-lg text-on-surface font-bold">1. Crie seu grupo</h4>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">
+                  Convide amigos por link, WhatsApp ou e-mail. Defina quem pode editar e quem apenas visualiza.
+                </p>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="step-connector">
+<div class="flex gap-4 items-start pb-8">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center flex-shrink-0 shadow-ambient">
+<span class="material-symbols-outlined text-[24px] text-on-secondary">how_to_vote</span>
+</div>
+<div class="flex-1 pt-1">
+<h4 class="text-label-lg font-label-lg text-on-surface font-bold">2. Vote nos passeios</h4>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">
+                  Descubra passeios e experiências. O grupo vota em tempo real para decidir o melhor roteiro.
+                </p>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div>
+<div class="flex gap-4 items-start">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center flex-shrink-0 shadow-ambient">
+<span class="material-symbols-outlined text-[24px] text-on-tertiary">payments</span>
+</div>
+<div class="flex-1 pt-1">
+<h4 class="text-label-lg font-label-lg text-on-surface font-bold">3. Divida os gastos</h4>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">
+                  Registre quem pagou o quê. O app calcula automaticamente quem deve pra quem — sem planilhas.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURES CARDS -->
+<section class="space-y-space-sm">
+<div class="text-center space-y-1">
+<h3 class="text-headline-md font-headline-md text-on-surface">Recursos inclusos</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">Tudo que você precisa para organizar a viagem</p>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-ambient border border-outline-variant/20 space-y-2 float-card">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px] text-primary">view_timeline</span>
+</div>
+<h5 class="text-label-md font-label-md text-on-surface font-bold">Roteiro dia a dia</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Monte o cronograma completo da viagem.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-ambient border border-outline-variant/20 space-y-2 float-card">
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px] text-secondary-container">chat_bubble</span>
+</div>
+<h5 class="text-label-md font-label-md text-on-surface font-bold">Chat do grupo</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Converse com todos em tempo real.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-ambient border border-outline-variant/20 space-y-2 float-card">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px] text-primary">receipt_long</span>
+</div>
+<h5 class="text-label-md font-label-md text-on-surface font-bold">Vouchers</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Acesse vouchers de reservas e experiências.</p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-ambient border border-outline-variant/20 space-y-2 float-card">
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px] text-secondary-container">notifications</span>
+</div>
+<h5 class="text-label-md font-label-md text-on-surface font-bold">Notificações</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Receba alertas de votações e novidades.</p>
+</div>
+</div>
+</section>
+<!-- TESTIMONIAL / SOCIAL PROOF -->
+<section class="bg-surface-container-lowest rounded-2xl p-5 shadow-ambient border border-outline-variant/20 space-y-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">star</span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">star</span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">star</span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">star</span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">star</span>
+</div>
+<blockquote class="text-body-lg font-body-lg text-on-surface italic">
+          "Organizar a viagem com 8 amigos ficou muito mais fácil. As votações são ótimas e a divisão de gastos é automática!"
+        </blockquote>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="text-label-md font-label-md text-primary">MS</span>
+</div>
+<div>
+<p class="text-label-md font-label-md text-on-surface font-bold">Mariana S.</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Usou para viagem ao litoral</p>
+</div>
+</div>
+</section>
+<!-- STATS -->
+<section class="grid grid-cols-3 divide-x divide-outline-variant/20 bg-surface-container-lowest rounded-2xl shadow-ambient border border-outline-variant/20 py-4">
+<div class="flex flex-col items-center gap-0.5">
+<span class="text-headline-md font-headline-md font-bold text-primary">12k+</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Viajantes</span>
+</div>
+<div class="flex flex-col items-center gap-0.5">
+<span class="text-headline-md font-headline-md font-bold text-secondary-container">3.2k+</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Viagens</span>
+</div>
+<div class="flex flex-col items-center gap-0.5">
+<span class="text-headline-md font-headline-md font-bold text-primary">4.8</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Avaliação</span>
+</div>
+</section>
+<!-- CTA SECTION -->
+<section class="text-center space-y-4 py-4">
+<h3 class="text-headline-lg font-headline-lg text-on-surface">Pronto para planejar sua próxima aventura?</h3>
+<p class="text-body-md font-body-md text-on-surface-variant">
+          Crie sua conta gratuita e comece a organizar viagens em grupo agora mesmo.
+        </p>
+<button class="w-full min-h-[48px] py-3.5 rounded-full bg-secondary-container text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-ambient active:scale-[0.98] transition-transform duration-150" onclick="window.location.href='login.html'">
+<span>Começar Agora</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</section>
+<!-- BOTTOM NAV (Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-margin py-space-xs pb-safe bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_-2px_rgba(10,77,104,0.06)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="index.html">
+<span class="material-symbols-outlined text-[22px]">flight_takeoff</span>
+<span class="text-label-sm font-label-sm">Viagens</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="votacao.html">
+<span class="material-symbols-outlined text-[22px]">explore</span>
+<span class="text-label-sm font-label-sm">Passeios</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-150 active:scale-95" href="dia-a-dia.html">
+<span class="material-symbols-outlined text-[22px]">view_timeline</span>
+<span class="text-label-sm font-label-sm">Roteiro</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-space-md py-space-xs shadow-sm active:scale-95 transition-transform duration-150" href="login.html">
+<span class="material-symbols-outlined text-[22px]">login</span>
+<span class="text-label-sm font-label-sm">Entrar</span>
+</a>
+</nav>
+</main>
+</body></html>
